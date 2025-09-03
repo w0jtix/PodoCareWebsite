@@ -14,7 +14,7 @@ export function Footer () {
   const navigate = useNavigate();
   return (
     <div className="footer-background  relative width-max">
-      <div className="footer-container flex justify-center align-items-center justify-self-center height-fit-content">
+      <div className="footer-container flex justify-self-center height-fit-content">
         <div className="footer-div flex-column width-max">
           <div className="footer-interior flex align-items-start width-max space-around">
             <div className="footer-info-section flex-column height-max justify-center">
