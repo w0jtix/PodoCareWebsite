@@ -1,6 +1,5 @@
 import React, { useCallback } from "react";
 import { useState, useRef, useEffect } from "react";
-import arrowThin from "../assets/arrow_thin.svg";
 
 /* single select -> item
 multi select -> array of items */
@@ -50,7 +49,7 @@ export function DropdownSelect<T extends DropdownItem>({
   className = "",
   searchPlaceholder = "Szukaj...",
   emptyMessage = "Nie znaleziono ",
-  arrowIcon = arrowThin,
+  arrowIcon = "src/assets/arrow_down.svg",
   tickIcon = "src/assets/tick.svg",
   addNewIcon = "src/assets/addNew.svg",
 }: DropdownSelectProps<T>) {
