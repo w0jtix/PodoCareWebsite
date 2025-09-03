@@ -928,6 +928,7 @@ script {
 }
 .faq-arrow.expanded {
   transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
 }
 .faq-answer {
   overflow: hidden;
@@ -1315,6 +1316,7 @@ script {
 }
 .arrow-down.rotated{
   transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
 }
 .service-name {
   font-family: var(--font-arial);
@@ -1415,6 +1417,7 @@ script {
   padding: 1px 12px;
   min-width: 263px;
   height: 36px;
+  color: var(--color-black);
 }
 .dropdown-header.selected {
   border: 1px solid var(--color-yellow);
@@ -1423,6 +1426,7 @@ script {
   font-size:var(--font-size-regular-text);
   font-family: var(--font-nunito);
   font-weight: var(--font-weight-semi-bold);
+  color: var(--color-black);
 }
 .dropdown-header-a.center {
   justify-content: center;
@@ -1529,6 +1533,7 @@ script {
 }
 .sb-category-arrow.rotated {
   transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
 }
 .sb-services-list {
   animation: slideDown 0.3s ease-out;
@@ -2384,6 +2389,7 @@ script {
 }
 .arrow.right.imgpop {
   transform:rotate(180deg);
+  -webkit-transform: rotate(180deg);
 }
 .arrow.imgpop.bottom {
   height:25px;
@@ -2400,6 +2406,7 @@ script {
 .arrow.imgpop.bottom.right:hover,
 .arrow.services-img.right:hover {
   transform: rotate(180deg) scale(1.2);
+  -webkit-transform: rotate(180deg) scale(1.2);
 }
 .sd-section.gallery {
   display:flex;
@@ -2493,6 +2500,7 @@ script {
 }
 .arrow-icon.right {
   transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
 }
 .arrow-icon.cards-homepage {
   width: 12px;

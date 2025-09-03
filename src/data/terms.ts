@@ -153,7 +153,7 @@ export const termsData: TermsData = {
             content: [
                 {
                     type: "paragraph",
-                    text: '1.	Gabinet świadczy usługi w zakresie i cenach określonych w cenniku udostępnionym za pośrednictwem platformy Booksy oraz na stronie Gabinetu pod linkiem: [https://podocare.com.pl/cennik](https://podocare.com.pl/cennik) (dalej "Cennik").'
+                    text: '1.	Gabinet świadczy usługi w zakresie i cenach określonych w cenniku udostępnionym za pośrednictwem platformy Booksy oraz na stronie Gabinetu pod linkiem: [https://podocare.com.pl/#/cennik](https://podocare.com.pl/#/cennik) (dalej "Cennik").'
                 },
                 {
                     type: "paragraph",
