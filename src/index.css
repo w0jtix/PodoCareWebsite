@@ -63,6 +63,10 @@
   --container-box-shadow:4px -4px 10px rgba(0, 0, 0, 0.1);
 }
 
+* {
+  outline: 1px solid red;
+}
+
 html, body {
   width: 100%;
   min-height: 100vh;
@@ -580,13 +584,16 @@ script {
   width:70px;
   opacity:90%;
   animation: bounce 1.4s ease-in-out infinite;
+  transform: rotate(0deg);
+  transform-origin: center center;
+  display: block;
 }
 @keyframes bounce {
   0%, 100% {
-    transform: translateY(0px);
+    transform: translate3d(0, 0, 0) rotate(0deg);
   }
   50% {
-    transform: translateY(-5px);
+    transform: translate3d(0, -5px, 0) rotate(0deg);
   }
 }
 .button {
@@ -2496,11 +2503,13 @@ script {
 .arrow-icon {
   width: 30px;
   height: 30px;
+  display:block;
   transition: transform 0.2s ease;
+  transform-origin: center center;
 }
 .arrow-icon.right {
-  transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg) translateZ(0);
+  -webkit-transform: rotate(180deg) translateZ(0);
 }
 .arrow-icon.cards-homepage {
   width: 12px;
