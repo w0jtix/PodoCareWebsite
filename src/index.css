@@ -63,8 +63,8 @@
   --container-box-shadow:4px -4px 10px rgba(0, 0, 0, 0.1);
 }
 
-* {
-  outline: 1px solid red;
+body, html {
+  overflow-x: hidden;
 }
 
 html, body {
