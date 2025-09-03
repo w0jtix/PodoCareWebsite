@@ -11,6 +11,7 @@ import SidebarMenu from "./SidebarMenu";
 import { useSearchParams } from "react-router-dom";
 import { getServiceForDisease } from "../utlis/diseaseServiceMap";
 import { useIsMobile } from "../hooks/useIsMobile";
+import arrowThin from "../../assets/arrow_thin.svg"
 
 interface CategoryItem {
   id: string;
@@ -246,7 +247,7 @@ export function ServicesBody() {
                       showTick={false}
                       multiple={false}
                       className="category-dropdown"
-                      arrowIcon={"src/assets/arrow_thin.svg"}
+                      arrowIcon={arrowThin}
                       allowColors={true}
                     />
                   </div>
@@ -268,7 +269,7 @@ export function ServicesBody() {
                       multiple={false}
                       disabled={false}
                       className="service-dropdown"
-                      arrowIcon={"src/assets/arrow_thin.svg"}
+                      arrowIcon={arrowThin}
                       allowColors={true}
                     />
                   </div>
