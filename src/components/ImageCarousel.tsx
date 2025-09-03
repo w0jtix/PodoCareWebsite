@@ -1,5 +1,7 @@
 import { Picture } from "@/data/diseases";
 import { useCallback, useState, useRef, useEffect } from "react";
+import arrow from "../assets/arrow.svg"
+import blackArrow from "../assets/black_arrow.svg"
 
 export interface ImageCarouselProps {
   pictures: Picture[];
@@ -238,14 +240,14 @@ export function ImageCarousel({
         >
           <img
             className={`arrow-icon ${arrowClassName}`}
-            src={`./src/assets/${
+            src={
               className === "cards-homepage" &&
               !arrowClassName.includes("blackArrow")
-                ? ""
+                ? arrow
                 : !standalone
-                ? ""
-                : "black_"
-            }arrow.svg`}
+                ? arrow
+                : blackArrow
+            }
             alt="Previous"
           />
         </button>
@@ -293,14 +295,14 @@ export function ImageCarousel({
         >
           <img
             className={`arrow-icon right ${arrowClassName}`}
-            src={`./src/assets/${
+            src={
               className === "cards-homepage" &&
               !arrowClassName.includes("blackArrow")
-                ? ""
+                ? arrow
                 : !standalone
-                ? ""
-                : "black_"
-            }arrow.svg`}
+                ? arrow
+                : blackArrow
+            }
             alt="Next"
           />
         </button>

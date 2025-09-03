@@ -1,3 +1,5 @@
+import magnifierIcon from "../assets/magnifier.svg"
+
 export interface SearchbarProps {
     placeholder?: string;
     value: string;
@@ -14,7 +16,7 @@ export function Searchbar ({
   return (
     <div className="sb-search">
         <div className="searchbar flex align-items-center">
-            <img className="searchbar-icon" src="src\assets\magnifier.svg" alt="Magnifier"></img>
+            <img className="searchbar-icon" src={magnifierIcon} alt="Magnifier"></img>
           <input
             type="text"
             placeholder={placeholder ?? ""}

@@ -7,17 +7,20 @@ export type SocialMedia = {
     href: string;
 }
 
+import instagram from "../assets/instagram.svg"
+import facebook from "../assets/facebook.svg"
+
 const socials: SocialMedia[] = [
     {
         name: AppTab.INSTAGRAM,
         alt: "Instagram",
-        src: "src/assets/instagram.svg",
+        src: instagram,
         href: tabRoutes[AppTab.INSTAGRAM]
     },
     {
         name: AppTab.FACEBOOK,
         alt: "Facebook",
-        src: "src/assets/facebook.svg",
+        src: facebook,
         href: tabRoutes[AppTab.FACEBOOK]
     }
 ]

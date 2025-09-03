@@ -5,9 +5,13 @@ import Button from "./Button";
 import HeaderLogo from "./HeaderLogo";
 import { callTo, googleMapsNavigate, redirectToBooksy } from "./utlis/navigation";
 import { getCurrentYear } from "./utlis/dateUtils";
+import navigationIcon from "../assets/gmaps.svg"
+import { redirectTo } from "./utlis/navigation";
+import { useNavigate } from "react-router-dom";
 
 export function Footer () {
 
+  const navigate = useNavigate();
   return (
     <div className="footer-background  relative width-max">
       <div className="footer-container flex justify-self-center height-fit-content">
@@ -21,7 +25,7 @@ export function Footer () {
                       <Button
                         footer={true}
                         disableImage={false}
-                        src={"src/assets/gmaps.svg"}
+                        src={navigationIcon}
                         alt="Google Maps"
                         text="Nawigacja"
                         onClick={googleMapsNavigate}
@@ -55,13 +59,17 @@ export function Footer () {
                   </div>
                   <div className="footer-urls flex-column height-fit-content">
                     {column.items.map((item, itemIndex) => (
-                      <a
+                      <span
                         key={itemIndex}
-                        href={item.href}
+                        onClick={() => {
+                          if ('name' in item) {
+                            redirectTo(item.name, navigate)
+                          }
+                        }}
                         className="single-url pointer"
                       >
                         {item.name}
-                      </a>
+                      </span>
                     ))}
                   </div>
                 </div>               

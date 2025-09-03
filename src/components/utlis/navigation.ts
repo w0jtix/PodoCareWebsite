@@ -1,7 +1,6 @@
 import { AppTab, tabRoutes } from "../../data/appTabs";
 import { getBooksyUrl } from "../../data/booksy";
 
-const baseUrl = "http://localhost:5173";
 const phoneNumber = "+48725868735";
 const mailAddress = "podocare.poznan@gmail.com"
 export const googleNavigation = "https://share.google/gTHhy6zYnR8I0DfxP"
@@ -15,14 +14,15 @@ export function redirectToBooksy (): void {
     }
 }
 
-export function redirectTo (tab: AppTab): void {
+export function redirectTo (tab: AppTab, navigate: (path:string)=> void): void {
     const url = tabRoutes[tab];
     if(!url) return;
 
     if (url.startsWith("http")) {
         window.open(url, "_blank");
     } else {
-        window.location.href = baseUrl + url;
+        navigate(url);
+        window.scrollTo(0, 0); 
     }
 }
 

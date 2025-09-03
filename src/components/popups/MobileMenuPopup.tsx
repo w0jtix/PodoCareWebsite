@@ -2,7 +2,7 @@ import HeaderMenu from "../header/HeaderMenu";
 import ReactDOM from "react-dom";
 import HeaderLogo from "../HeaderLogo";
 import HeaderSocials from "../header/HeaderSocials";
-
+import closeIcon from "../../assets/close.svg"
 import { AppTab } from "../../data/appTabs";
 
 export interface MobileMenuPopupProps {
@@ -32,7 +32,7 @@ export function MobileMenuPopup({
           onClick={onClose}
         >
           <img
-            src="src/assets/close.svg"
+            src={closeIcon}
             alt="Close"
             className="popup-close-icon"
           />

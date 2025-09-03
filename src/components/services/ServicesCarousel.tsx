@@ -1,6 +1,7 @@
 import { useRef, useEffect } from "react";
 import { PriceListItem } from "../../data/priceList";
 import Button from "../Button";
+import yellowTick from "../../assets/yellow-tick.svg"
 
 export interface ServicesCarouselProps {
   zabiegiServices: PriceListItem[];
@@ -147,7 +148,7 @@ export function ServicesCarousel({
                                   >
                                     <img
                                       className="services-feature-icon"
-                                      src="src/assets/yellow-tick.svg"
+                                      src={yellowTick}
                                       alt="Check"
                                     />
                                     <span
@@ -190,7 +191,7 @@ export function ServicesCarousel({
                           <div className="services-feature-item width-90 flex nails">
                             <img
                               className="services-feature-icon"
-                              src="src/assets/yellow-tick.svg"
+                              src={yellowTick}
                               alt="Check"
                             />
                             <span
@@ -237,7 +238,7 @@ export function ServicesCarousel({
                                   >
                                     <img
                                       className="services-feature-icon"
-                                      src="src/assets/yellow-tick.svg"
+                                      src={yellowTick}
                                       alt="Check"
                                     />
                                     <span

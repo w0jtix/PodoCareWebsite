@@ -1,5 +1,6 @@
 import { OPENING_HOURS } from "../data/header-info";
 import { redirectToBooksy } from "./utlis/navigation";
+import calendarIcon from "../assets/calendar.svg"
 
 export interface InfoOpeningHoursProps {
   displayImg?: boolean;
@@ -14,7 +15,7 @@ export function InfoOpeningHours ({ displayImg = true, className="" }: InfoOpeni
         <div className="info-oh-img-bg flex justify-center">
           <img
             className="info-oh-img align-self-center"
-            src="./src/assets/calendar.svg"
+            src={calendarIcon}
             alt="Calendar"
           ></img>
         </div>

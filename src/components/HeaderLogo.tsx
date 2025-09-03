@@ -1,3 +1,4 @@
+import logo from "../assets/podocarelogo.svg"
 
 export interface HeaderLogoProps {
   className?: string;
@@ -9,7 +10,7 @@ export function HeaderLogo ({ className="" }: HeaderLogoProps) {
       <a href="/" className={`header-logo-link flex align-items-center pointer ${className}`}>
         <img
           className={`header-logo-img border-radius-half pointer ${className}`}
-          src="src/assets/podocarelogo.svg"
+          src={logo}
           alt="PodoCare"
         ></img>
         <h1 className={`header-logo-brandname pointer m-0 nowrap ${className}`}>PodoCare</h1>

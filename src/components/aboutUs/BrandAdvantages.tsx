@@ -1,4 +1,9 @@
 import { aboutUsData } from "../../data/texts";
+import yellowTick from "../../assets/yellow-tick.svg"
+import arrowTl from "../../assets/arrow-tl.svg"
+import arrowTr from "../../assets/arrow-tr.svg"
+import arrowBl from "../../assets/arrow-bl.svg"
+import arrowBr from "../../assets/arrow-br.svg"
 
 const AboutUsExperience = () => {
   const brandName = "PODOCARE";
@@ -11,7 +16,7 @@ const AboutUsExperience = () => {
             <div className="adv-title-container flex">
               <img
                 className="check-icon"
-                src="src\assets\yellow-tick.svg"
+                src={yellowTick}
                 alt="Checkmark"
               ></img>
               <h3 className="advantages-title">{aboutUsData[0].title}</h3>
@@ -19,7 +24,7 @@ const AboutUsExperience = () => {
             <p className="advantages-desc m-0">{aboutUsData[0].desc}</p>
           </div>
           <img
-            src="src/assets/arrow-tl.svg"
+            src={arrowTl}
             alt=""
             className="arrow-about-us align-self-end"
           />
@@ -27,7 +32,7 @@ const AboutUsExperience = () => {
 
         <div className="advantages-item top-right flex justify-self-start text-align-left">
           <img
-            src="src/assets/arrow-tr.svg"
+            src={arrowTr}
             alt=""
             className="arrow-about-us align-self-end"
           />
@@ -35,7 +40,7 @@ const AboutUsExperience = () => {
             <div className="adv-title-container flex">
               <img
                 className="check-icon"
-                src="src\assets\yellow-tick.svg"
+                src={yellowTick}
                 alt="Checkmark"
               ></img>
               <h3 className="advantages-title">{aboutUsData[1].title}</h3>
@@ -59,7 +64,7 @@ const AboutUsExperience = () => {
             <div className="adv-title-container flex">
               <img
                 className="check-icon"
-                src="src\assets\yellow-tick.svg"
+                src={yellowTick}
                 alt="Checkmark"
               ></img>
               <h3 className="advantages-title">{aboutUsData[2].title}</h3>
@@ -67,7 +72,7 @@ const AboutUsExperience = () => {
             <p className="advantages-desc m-0">{aboutUsData[2].desc}</p>
           </div>
           <img
-            src="src/assets/arrow-bl.svg"
+            src={arrowBl}
             alt=""
             className="arrow-about-us"
           />
@@ -75,7 +80,7 @@ const AboutUsExperience = () => {
 
         <div className="advantages-item bottom-right flex justify-self-start text-align-left">
           <img
-            src="src/assets/arrow-br.svg"
+            src={arrowBr}
             alt=""
             className="arrow-about-us"
           />
@@ -83,7 +88,7 @@ const AboutUsExperience = () => {
             <div className="adv-title-container flex">
               <img
                 className="check-icon"
-                src="src\assets\yellow-tick.svg"
+                src={yellowTick}
                 alt="Checkmark"
               ></img>
               <h3 className="advantages-title">{aboutUsData[3].title}</h3>

@@ -9,6 +9,8 @@ import MobileMenuPopup from "../popups/MobileMenuPopup";
 import { AppTab } from "../../data/appTabs";
 import { useIsMobile } from "../hooks/useIsMobile";
 import { callTo } from "../utlis/navigation";
+import callUs from "../../assets/call-us.svg"
+import hamburgerMenu from "../../assets/hamburger-menu.svg"
 
 export interface HeaderProps {
   page: AppTab
@@ -35,7 +37,7 @@ export function Header({ page }: HeaderProps) {
             <InfoOpeningHours/>
             <InfoAddress/>
             <Button  
-              src= "src\assets\hamburger-menu.svg"
+              src={hamburgerMenu}
               alt={"HamburgerMenu"}
               disableText={true}
               customClassName="hamburger-menu"       
@@ -51,7 +53,7 @@ export function Header({ page }: HeaderProps) {
         className="call-us-mobile absolute flex justify-center align-items-center"
         onClick={callTo}
         >
-          <img className="call-us-icon" src="src\assets\callUs.svg" alt="Call Us"></img>
+          <img className="call-us-icon" src={callUs} alt="Call Us"></img>
         </button>
       )}
       {isMobileMenuOpen && (

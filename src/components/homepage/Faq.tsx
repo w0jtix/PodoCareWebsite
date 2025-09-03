@@ -3,6 +3,7 @@ import { faqItems, FaqItem } from "../../data/faq";
 import Button from "../Button";
 import { navigateToServiceDetail, redirectTo, redirectToBooksy } from "../utlis/navigation";
 import { useNavigate } from "react-router-dom";
+import arrowThin from "../../assets/arrow_thin.svg"
 
 export function Faq() {
   const [expandedItems, setExpandedItems] = useState<Set<number>>(new Set());
@@ -24,7 +25,7 @@ export function Faq() {
     if(item.serviceName) {
       navigateToServiceDetail(navigate, item.serviceName);
     } else if (item.redirectTab) {
-      redirectTo(item.redirectTab);
+      redirectTo(item.redirectTab, navigate);
     } else if (item.booksy) {
       redirectToBooksy();
     }
@@ -53,7 +54,7 @@ export function Faq() {
                 className={`faq-arrow ${
                   expandedItems.has(index) ? "expanded" : ""
                 }`}
-                src="src\assets\arrow_thin.svg"
+                src={arrowThin}
                 alt="Arrow Thin"
               ></img>
             </button>

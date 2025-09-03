@@ -5,12 +5,14 @@ import {
   googleMapsNavigate,
   mailTo,
 } from "../utlis/navigation";
+import { useNavigate } from "react-router-dom";
 
 export interface ContactCardProps {
   item: contactRoute;
 }
 
 export function ContactCard({ item }: ContactCardProps) {
+  const navigate = useNavigate();
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
 
@@ -22,7 +24,7 @@ export function ContactCard({ item }: ContactCardProps) {
         googleMapsNavigate();
         break;
       case "route":
-        if (item.tab) redirectTo(item.tab);
+        if (item.tab) redirectTo(item.tab, navigate);
         break;
       case "mail":
         mailTo();

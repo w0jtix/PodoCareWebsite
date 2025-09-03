@@ -5,6 +5,8 @@ import {
 } from "../../data/texts";
 import FAActivities from "./FAActivities";
 import Article from "../Article";
+import questionIcon from "../../assets/question.svg"
+import infoIcon from "../../assets/info.svg"
 
 export function FABody() {
   return (
@@ -17,7 +19,7 @@ export function FABody() {
           <section className="appointment-common art flex-column justify-self-center align-self-center height-fit-content width-70">
             <Article 
                 article={firstAppointmentEntryText}
-                headerImgSrc={"src/assets/question.svg"}
+                headerImgSrc={questionIcon}
                 headerImgAlt={"Question Mark"}
             />
           </section>
@@ -28,7 +30,7 @@ export function FABody() {
           <section className="appointment-common art flex-column justify-self-center align-self-center height-fit-content width-70">
             <Article 
                 article={firstAppointmentProcess}
-                headerImgSrc={"src/assets/info.svg"}
+                headerImgSrc={infoIcon}
                 headerImgAlt={"Information Mark"}
             />
           </section>

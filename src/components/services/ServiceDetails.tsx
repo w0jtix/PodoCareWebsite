@@ -11,6 +11,9 @@ import { loadShuffledImagesFromFolder } from "../utlis/imageLoader";
 import { redirectTo } from "../utlis/navigation";
 import { AppTab } from "../../data/appTabs";
 import { useVisibleItemsCount } from "../hooks/useVisibleItemsCount";
+import doubleArrow from "../../assets/double-arrow.svg"
+import singleArrow from "../../assets/single-arrow.svg"
+import { useNavigate } from "react-router-dom";
 
 export interface ServiceDetailsProps {
   selectedService: PriceListItem | null;
@@ -28,6 +31,7 @@ export function ServiceDetails({
   const containerRef = useRef<HTMLDivElement>(null);
   const [popupOpen, setPopupOpen] = useState<boolean>(false);
   const [selectedPicture, setSelectedPicture] = useState<Picture | null>(null);
+  const navigate = useNavigate();
 
   const imagesCarouselBreakpoints = [
     { width: 480, count: 2 },
@@ -136,7 +140,7 @@ export function ServiceDetails({
         <div className="sd-s-text flex">
           <img
             className="bp-arrows"
-            src="src\assets\double-arrow.svg"
+            src={doubleArrow}
             alt="Bullet Point"
           ></img>
           <p className="sd-section-text m-0 text-align-justify">
@@ -174,7 +178,7 @@ export function ServiceDetails({
           <div key={index} className="is-for-you-row flex align-items-center">
             <img
               className="bp-arrows-single"
-              src="src\assets\single-arrow.svg"
+              src={singleArrow}
               alt="Bullet Point"
             ></img>
             <p className="sd-section-text-is-for-you m-0 text-align-justify">
@@ -194,7 +198,7 @@ export function ServiceDetails({
         <div className="sd-s-text flex">
           <img
             className="bp-arrows"
-            src="src\assets\double-arrow.svg"
+            src={doubleArrow}
             alt="Bullet Point"
           ></img>
           <p className="sd-section-text m-0 text-align-justify">
@@ -208,7 +212,7 @@ export function ServiceDetails({
           <Button
             text={"Sprawdź"}
             disableImage={true}
-            onClick={() => redirectTo(AppTab.PRZED_WIZYTA)}
+            onClick={() => redirectTo(AppTab.PRZED_WIZYTA, navigate)}
             shiny={true}
           />
         </div>

@@ -1,4 +1,7 @@
 import { activities } from "../../data/texts";
+import bulletPoint from "../../assets/bulletpoint.svg"
+import greenTick from "../../assets/green-tick.svg"
+import redX from "../../assets/red-x.svg"
 
 export interface FAActivitiesProps {
   activities: activities;
@@ -9,25 +12,20 @@ export function FAActivities({
   activities,
   className = "",
 }: FAActivitiesProps) {
+
+  const activityIcons: Record<string,{src: string, alt: string}> = {
+    "To zrób przed": {src: greenTick, alt:"Tick"},
+    "Tego nie rób": { src: redX, alt: "X"}
+  }
+
+
   return (
     <div className={`fa-activities-container flex-column width-90 ${className}`}>
       <section className="activity-title-section flex width-80 justify-center align-items-center align-self-center g-10">
         <img
           className="activity-title-img"
-          src={`src/assets/${
-            activities.category === "To zrób przed"
-              ? `green-tick`
-              : activities.category === "Tego nie rób"
-              ? `red-x`
-              : ""
-          }.svg`}
-          alt={`${
-            activities.category === "To zrób przed"
-              ? `Tick`
-              : activities.category === "Tego nie rób"
-              ? `X`
-              : ""
-          }`}
+          src={activityIcons[activities.category]?.src}
+          alt={activityIcons[activities.category]?.alt}
         />
         <h2 className="activity-title flex justify-center">{activities.category}</h2>
       </section>
@@ -36,7 +34,7 @@ export function FAActivities({
           <div className="flex align-items-center g-5">
             <img
               className="activity-text-img"
-              src="src\assets\bulletpoint.svg"
+              src={bulletPoint}
               alt="Bullet Point"
             ></img>
             <p className="activity-text text-align-justify">{activity}</p>

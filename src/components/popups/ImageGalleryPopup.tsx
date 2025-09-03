@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 import { Picture } from "@/data/diseases";
 import ImageCarousel from "../ImageCarousel";
 import { useVisibleItemsCount } from "../hooks/useVisibleItemsCount";
+import closeIcon from "../../assets/close.svg"
+import arrow from "../../assets/arrow.svg"
 
 export interface ImageGalleryPopupProps {
   header?: string;
@@ -118,7 +120,7 @@ export function ImageGalleryPopup({
       >
         <button className="popup-close-button absolute pointer transparent border-none p-0" onClick={onClose}>
             <img
-              src="src/assets/close.svg"
+              src={closeIcon}
               alt="Close"
               className="popup-close-icon"
             />
@@ -134,7 +136,7 @@ export function ImageGalleryPopup({
             >
               <img
                 className={`arrow pointer ${className}`}
-                src="./src/assets/arrow.svg"
+                src={arrow}
                 alt="Previous"
               />
             </button>
@@ -154,7 +156,7 @@ export function ImageGalleryPopup({
             >
               <img
                 className={`arrow right pointer ${className}`}
-                src="./src/assets/arrow.svg"
+                src={arrow}
                 alt="Next"
               />
             </button>

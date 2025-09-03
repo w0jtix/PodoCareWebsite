@@ -2,6 +2,9 @@ import { useMemo } from "react";
 import { testimonialData } from "../../data/testimonials";
 import { useCarouselTouch } from "../hooks/useCarouselTouch";
 import { balancedShuffle } from "../utlis/balancedShuffle";
+import star from "../../assets/google-star.svg"
+import booksyIcon from "../../assets/booksy.png"
+import googleIcon from "../../assets/google.png"
 
 export function Testimonials () {
 
@@ -22,6 +25,12 @@ export function Testimonials () {
     onMouseEnter,
     onMouseLeave,
   } = useCarouselTouch(randomizedTestimonials.length, 392, 1);
+
+
+  const sourceIcons: Record<string, string> = {
+    google: googleIcon,
+    booksy: booksyIcon
+  }
 
   return (
     <section
@@ -44,7 +53,7 @@ export function Testimonials () {
             <div className="flex space-between">
               <img
                 className="testimonial-source-img border-radius-half"
-                src={`src/assets/${testimonial.source.toLowerCase()}.png`}
+                src={sourceIcons[testimonial.source.toLowerCase()]}
                 alt="Review Source"
               ></img>
               <div className="flex">
@@ -52,7 +61,7 @@ export function Testimonials () {
                   <img
                     key={starIndex}
                     className="star-img"
-                    src="src/assets/google-star.svg"
+                    src={star}
                     alt="Star"
                   />
                 ))}

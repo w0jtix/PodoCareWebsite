@@ -5,9 +5,11 @@ export interface HeaderSocialsProps {
   className?: string;
 }
 
-export function HeaderSocials({ className="" }: HeaderSocialsProps) {
+export function HeaderSocials({ className = "" }: HeaderSocialsProps) {
   return (
-    <div className={`header-socials-container flex-column justify-center ${className}`}>
+    <div
+      className={`header-socials-container flex-column justify-center ${className}`}
+    >
       {socials.map((medium) => (
         <SocialButton
           key={medium.name}

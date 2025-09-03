@@ -5,6 +5,7 @@ import EntryPicture from './EntryPicture';
 import { redirectTo } from '../utlis/navigation';
 import { AppTab } from '../../data/appTabs';
 import { useIsMobile } from '../hooks/useIsMobile';
+import { useNavigate } from 'react-router-dom';
 
 export interface ResponsiveHomeCarouselProps {
   onTriggerHeaderAnimation?: () => void;
@@ -18,6 +19,7 @@ export function HomeCarousel({
   const [headerAnimationTriggered, setHeaderAnimationTriggered] = useState(false);
 
   const isMobileView = useIsMobile();
+  const navigate = useNavigate();
 
   const handleCirclesComplete = () => {
     setShowButton(true);    
@@ -73,7 +75,7 @@ export function HomeCarousel({
                 text={"Poznaj nasz zespół"}
                 disableImage={true}
                 backgroundVersion={"dark"}
-                onClick={() => redirectTo(AppTab.O_NAS)}
+                onClick={() => redirectTo(AppTab.O_NAS, navigate)}
                 shiny={true}
               />
             )}
@@ -111,7 +113,7 @@ export function HomeCarousel({
                 text={"Poznaj naszą ofertę"}
                 disableImage={true}
                 backgroundVersion={"dark"}
-                onClick={() => redirectTo(AppTab.USLUGI)}
+                onClick={() => redirectTo(AppTab.USLUGI, navigate)}
                 shiny={true}
                 
               />
@@ -132,7 +134,7 @@ export function HomeCarousel({
                   text={"Poznaj nasz zespół"}
                   disableImage={true}
                   backgroundVersion={"light"}
-                  onClick={() => redirectTo(AppTab.O_NAS)}
+                  onClick={() => redirectTo(AppTab.O_NAS, navigate)}
                   shiny={true}
                 />
               </div>

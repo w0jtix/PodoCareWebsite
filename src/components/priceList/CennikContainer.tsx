@@ -3,6 +3,8 @@ import { priceListData, PriceListItem } from "../../data/priceList";
 import Button from "../Button";
 import { navigateToServiceDetail, redirectToBooksy } from "../utlis/navigation";
 import { useNavigate } from "react-router-dom";
+import booksyImg from "../../assets/booksy.png"
+import arrowDown from "../../assets/arrow-down.svg"
 
 export function CennikContainer() {
   const [expandedServices, setExpandedServices] = useState<Set<number>>(
@@ -65,7 +67,7 @@ export function CennikContainer() {
                   >
                     <img
                       className="cennik-booksy-img"
-                      src="src\assets\booksy.png"
+                      src={booksyImg}
                       alt="Booksy"
                     ></img>
                     <span className="service-price-text">Rezerwacja</span>
@@ -98,7 +100,7 @@ export function CennikContainer() {
                             className={`arrow-down ${
                               isExpanded ? "rotated" : ""
                             }`}
-                            src="src\assets\arrow-down.svg"
+                            src={arrowDown}
                             alt="Arrow Down"
                           ></img>
                           <div

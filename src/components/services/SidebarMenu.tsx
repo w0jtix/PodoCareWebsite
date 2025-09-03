@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { PriceListItem } from "../../data/priceList";
 import Searchbar from "../Searchbar";
+import arrowDown from "../../assets/arrow-down.svg"
 
 export interface SidebarMenuProps {
   data: PriceListItem[];
@@ -201,7 +202,7 @@ export function SidebarMenu({
                     className={`sb-category-arrow ${
                       isExpanded ? "rotated" : ""
                     }`}
-                    src="src/assets/arrow-down.svg"
+                    src={arrowDown}
                     alt="Dropdown Arrow"
                   />
                 </div>

@@ -1,5 +1,6 @@
 import { AppTab } from "@/data/appTabs";
 import { redirectTo } from "./utlis/navigation";
+import { useNavigate } from "react-router-dom";
 
 export interface SocialButtonProps {
   src: string;
@@ -9,10 +10,11 @@ export interface SocialButtonProps {
 }
 
 export function SocialButton( { src, alt, tab, className="" }: SocialButtonProps) {
+  const navigate = useNavigate();
   return (
     <div 
     className={`social-button border-none align-items-center pointer ${className}`}
-    onClick={() => redirectTo(tab)}
+    onClick={() => redirectTo(tab, navigate)}
     >
         <img
             className={`sm-icon ${className}`}

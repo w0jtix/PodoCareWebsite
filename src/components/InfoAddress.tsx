@@ -1,5 +1,6 @@
 import { ADDRESS } from "../data/header-info";
 import { callTo, googleMapsNavigate } from "./utlis/navigation";
+import homeIcon from "../assets/home.svg"
 
 export interface InfoAddressProps {
   className?: string;
@@ -11,7 +12,7 @@ export function InfoAddress ({ className="" }: InfoAddressProps) {
         <div className="info-oh-img-bg flex justify-center">
           <img
             className="info-oh-img align-self-center"
-            src="src\assets\home.svg"
+            src={homeIcon}
             alt="Home"
           ></img>
         </div>

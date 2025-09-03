@@ -26,19 +26,22 @@ export type employee = {
     img: Picture;
 }
 
+import mariaImg from "../assets/maria1.png"
+import olgaImg from "../assets/olga1edit.jpg"
+
 export const employeeData: employee[] = [{
     name: "Maria",
     desc: "Z doświadczeniem, bezpiecznie i z troską o każdy krok.",
     img: {
-        src:"src/assets/maria1.png",
+        src: mariaImg,
         alt:"Employee"
-    }
+    } 
 },
 {
     name: "Olga",
     desc: "Profesjonalnie, z delikatnością i pełnym zaangażowaniem.",
     img: {
-        src:"src/assets/olga1edit.jpg",
+        src: olgaImg,
         alt:"Employee"
     }
 }]
@@ -125,11 +128,17 @@ export const firstAppointmentProcess: thread  = {
     tab?: AppTab;
   }
 
+  import addressIcon from "../assets/c-address.svg"
+  import mailIcon from "../assets/c-mail.svg"
+  import phoneIcon from "../assets/c-phone.svg"
+  import instagramIcon from "../assets/c-ig.svg"
+  import facebookIcon from "../assets/c-fb.svg"
+
 export const contactData: contactRoute[] = [
   {
     line: "ul. Warszawska 51/3",
     subLine: "61-028 Poznań",
-    src: "src/assets/c-address.svg",
+    src: addressIcon,
     alt: "Address",
     text:"Odwiedź nas",
     href: googleNavigation,
@@ -138,7 +147,7 @@ export const contactData: contactRoute[] = [
   },
   {
     line:"Szybka odpowiedź gwarantowana.",
-    src: "src/assets/c-mail.svg",
+    src: mailIcon,
     alt: "Mail",
     text:"Napisz",
     href:"",
@@ -147,7 +156,7 @@ export const contactData: contactRoute[] = [
   },
   {
     line: "W godzinach pracy gabinetu.",
-    src: "src/assets/c-phone.svg",
+    src: phoneIcon,
     alt: "Phone",
     text:"Zadzwoń",
     href:"",
@@ -156,7 +165,7 @@ export const contactData: contactRoute[] = [
   },
   {
     line: "Odwiedź nas na Instagramie.",
-    src: "src/assets/c-ig.svg",
+    src: instagramIcon,
     alt: "Instagram",
     text: AppTab.INSTAGRAM,
     href: tabRoutes[AppTab.INSTAGRAM],
@@ -165,7 +174,7 @@ export const contactData: contactRoute[] = [
   },
   {
     line: "Odwiedź nas na Facebooku.",
-    src: "src/assets/c-fb.svg",
+    src: facebookIcon,
     alt: "Facebook",
     text: AppTab.FACEBOOK,
     href:tabRoutes[AppTab.FACEBOOK],

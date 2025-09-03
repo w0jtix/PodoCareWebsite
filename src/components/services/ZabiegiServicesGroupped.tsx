@@ -11,6 +11,9 @@ import { AppTab } from "../../data/appTabs";
 import { redirectTo } from "../utlis/navigation";
 import { useVisibleItemsCount } from "../hooks/useVisibleItemsCount";
 import { zabiegiIntroInformations } from "../../data/texts";
+import important from "../../assets/important.svg"
+import doubleArrow from "../../assets/double-arrow.svg"
+import { useNavigate } from "react-router-dom";
 
 export interface ZabiegiServicesGrouppedProps {
   visibleImg: number;
@@ -28,6 +31,7 @@ export function ZabiegiServicesGroupped({
   );
   const [popupOpen, setPopupOpen] = useState<boolean>(false);
   const [selectedPicture, setSelectedPicture] = useState<Picture | null>(null);
+  const navigate = useNavigate();
 
   const zabiegiCardBreakpoints = [
     { width: 768, count: 5 },
@@ -73,7 +77,7 @@ export function ZabiegiServicesGroupped({
             <div className="zs-important-info-container flex">
               <img
                 className="zs-importnant-icon"
-                src="src\assets\important.svg"
+                src={important}
                 alt="Important"
               ></img>
               <div className="zs-imp-spans flex-column">
@@ -106,7 +110,7 @@ export function ZabiegiServicesGroupped({
               <div className="sd-s-text flex">
                 <img
                   className="bp-arrows"
-                  src="src\assets\double-arrow.svg"
+                  src={doubleArrow}
                   alt="Bullet Point"
                 ></img>
                 <p className="sd-section-text m-0 text-align-justify">
@@ -137,7 +141,7 @@ export function ZabiegiServicesGroupped({
             <div className="sd-s-text flex">
               <img
                 className="bp-arrows"
-                src="src\assets\double-arrow.svg"
+                src={doubleArrow}
                 alt="Bullet Point"
               ></img>
               <p className="sd-section-text m-0 text-align-justify">
@@ -151,7 +155,7 @@ export function ZabiegiServicesGroupped({
               <Button
                 text={"Sprawdź"}
                 disableImage={true}
-                onClick={() => redirectTo(AppTab.PRZED_WIZYTA)}
+                onClick={() => redirectTo(AppTab.PRZED_WIZYTA, navigate)}
                 shiny={true}
               />
             </div>

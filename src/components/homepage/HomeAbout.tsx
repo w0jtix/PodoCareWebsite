@@ -1,4 +1,5 @@
 import welcomeText from "../../data/texts";
+import bouncingArrow from "../../assets/bouncing_arrow.svg"
 
 export function HomeAbout() {
   return (
@@ -19,7 +20,7 @@ export function HomeAbout() {
 
           <img
             className="bouncing-arrow"
-            src="src\assets\bouncing_arrow.svg"
+            src={bouncingArrow}
             alt="Bouncing Arrow"
           ></img>
         </div>

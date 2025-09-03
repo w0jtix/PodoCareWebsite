@@ -4,10 +4,15 @@ import Button from "../../Button";
 import { useState, useEffect, useRef } from "react";
 import { redirectTo, redirectToBooksy } from "../../utlis/navigation";
 import { AppTab } from "../../../data/appTabs";
+import calendarIcon from "../../../assets/calendar.svg"
+import footprintIcon from "../../../assets/footprint.svg"
+import terapiaIcon from "../../../assets/terapia.png"
+import { useNavigate } from "react-router-dom";
 
 const AppointmentRoadmap = () => {
   const roadmapRef = useRef(null);
   const [start, setStart] = useState<boolean>(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -41,7 +46,7 @@ const AppointmentRoadmap = () => {
           start={start}
           delay={0}
           label={"Rejestracja"}
-          src={"src/assets/calendar.svg"}
+          src={calendarIcon}
           alt={"Umów wizytę"}
         />
         <FillingLine delay={600} start={start} />
@@ -49,7 +54,7 @@ const AppointmentRoadmap = () => {
           start={start}
           delay={1100}
           label={"Konsultacja"}
-          src={"src/assets/footprint.svg"}
+          src={footprintIcon}
           alt={"Konsultacja"}
         />
         <FillingLine delay={1700} start={start} />
@@ -57,7 +62,7 @@ const AppointmentRoadmap = () => {
           start={start}
           delay={2200}
           label={"Terapia"}
-          src={"src/assets/terapia.png"}
+          src={terapiaIcon}
           alt={"Terapia"}
         />
       </div>
@@ -78,7 +83,7 @@ const AppointmentRoadmap = () => {
           <Button
             text={"Kontakt"}
             disableImage={true}
-            onClick={() => redirectTo(AppTab.KONTAKT)}
+            onClick={() => redirectTo(AppTab.KONTAKT, navigate)}
             backgroundVersion="dark"
           />
         </div>
@@ -88,7 +93,7 @@ const AppointmentRoadmap = () => {
           <Button
             text={"Sprawdź"}
             disableImage={true}
-            onClick={() => redirectTo(AppTab.PRZED_WIZYTA)}
+            onClick={() => redirectTo(AppTab.PRZED_WIZYTA, navigate)}
             backgroundVersion="dark"
           />
         </div>
