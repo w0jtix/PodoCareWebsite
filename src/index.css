@@ -63,10 +63,6 @@
   --container-box-shadow:4px -4px 10px rgba(0, 0, 0, 0.1);
 }
 
-body, html {
-  overflow-x: hidden;
-}
-
 html, body {
   width: 100%;
   min-height: 100vh;
@@ -124,10 +120,12 @@ script {
   gap:1rem;
 }
 .body-container {
+  margin: 0 auto;
   border-radius: 0;
   background-color: var(--color-white);
 }
 .footer-container{
+  margin: 0 auto;
   height: 6.31rem;
   border-radius: 0;
   border-bottom-right-radius: var(--border-radius-container-value);

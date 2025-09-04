@@ -62,7 +62,7 @@ export function ServiceDetails({
       )
     : 0;
 
-  /* sidebarMenu choice -> scroll to the top */
+  /* sidebarMenu choice/ nav from priceList -> scroll to the top */
   useEffect(() => {
     if (selectedService) {
       const headerHeight = window.innerHeight * 0.17;
@@ -130,6 +130,7 @@ export function ServiceDetails({
         <Selector
           onSelectionChange={onSelectionChange}
           className="bw-selector sm-res"
+          preselectedValue={preselectedBrodawkiValue}
         />
       )}
       <section className="sd-section">
