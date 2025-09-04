@@ -3,3 +3,7 @@ export const processText = (text: string) => {
     .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="terms-link">$1</a>')
     .replace(/__(.+?)__/g, '<u>$1</u>');
   }
+
+export function normalizeString(str: string) {
+  return str.normalize('NFC').trim();
+}

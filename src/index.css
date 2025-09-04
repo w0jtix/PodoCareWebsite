@@ -66,13 +66,20 @@
 html, body {
   width: 100%;
   min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--color-header-footer-background);
   margin: 0;
   padding: 0;
   background-size: cover;
 }
 .page {
   background-color: var(--color-body-background);
-  padding-top: 9rem;
+  padding-top: calc(9rem + env(safe-area-inset-top));
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 script {
   display: block;
