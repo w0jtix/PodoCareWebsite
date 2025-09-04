@@ -2361,6 +2361,7 @@ script {
   font-size: var(--font-size-title);
   align-self:center;
   margin: 0;
+  height:100%;
 }
 .popup-close-button {
   right: -320px;
@@ -2433,8 +2434,12 @@ script {
   width: fit-content;
   align-self:center;
 }
+.image-carousel-wrapper.services-img {
+  max-width: 100%;
+}
 .image-carousel-wrapper.imgpop {
   background-color: rgba(128, 128, 128, 0.2);
+  max-width: 95%;
 }
 .image-carousel-wrapper.cards-homepage {
   background-color: rgba(128, 128, 128, 0.3);
@@ -3186,7 +3191,7 @@ script {
     font-size: 32px;
   }
   .popup-close-button {
-    right: 5px;
+    right: 2%;
   }
   .arrow.imgpop {
     width: 35px;
@@ -3351,7 +3356,7 @@ script {
     width: 75%;
   }
   .header-container {
-    height: 5.5rem;
+    height: 6.5rem;
   }
   .header-logo-img {
     width: 40px;
@@ -4016,7 +4021,7 @@ script {
     font-size: var(--font-size-readable-text);
   }
   .popup-close-button {
-    right: 5px;
+    right: 2%;
   }
   .arrow.imgpop {
     width: 35px;
@@ -4461,6 +4466,7 @@ script {
   }
   .dropdown-header {
     min-width: 401px;
+    max-width:401px;
   }
   .home-body-row.sd,
   .sd-section.zs {
@@ -4709,7 +4715,7 @@ script {
 
 @media (min-width: 320px) and (max-width: 469px) {
   .header-container {
-    height: 5.25rem;
+    height: 6.5rem;
   }
   .header-left-section {
     width:75%;
@@ -4879,7 +4885,6 @@ script {
     width: 13px;
     height: 13px;
   }
-
   .dropdown-header {
     min-width: 270px;
     max-width: 270px;
@@ -5006,6 +5011,27 @@ script {
     width: 20px;
   }
 } 
+
+@media (min-width: 320px) and (max-width: 400px){
+  .image-carousel-wrapper.imgpop {
+    max-width: 300px;
+  }
+}
+@media (min-width: 401px) and (max-width: 460px){
+  .image-carousel-wrapper.imgpop {
+    max-width: 380px;
+  }
+}
+@media (min-width: 461px) and (max-width: 527px){
+  .image-carousel-wrapper.imgpop {
+    max-width: 440px;
+  }
+}
+@media (min-width: 528px) and (max-width: 619px){
+  .image-carousel-wrapper.imgpop {
+    max-width: 500px;
+  }
+}
 
 /* entry-pic adjustments */
 @media (min-width: 830px) and (max-width: 900px) {

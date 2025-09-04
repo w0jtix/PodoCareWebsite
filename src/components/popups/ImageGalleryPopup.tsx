@@ -31,11 +31,11 @@ export function ImageGalleryPopup({
 
   const maxVisibleBreakpoints = [
     { width: 400, count: 2 },
-    { width: 550, count: 3 },
-    { width: 700, count: 4 },
-    { width: 768, count: 5 },
-    { width: 880, count: 5 },
-    { width: 1086, count: 6 },
+    { width: 550, count: 2 },
+    { width: 700, count: 2 },
+    { width: 768, count: 3 },
+    { width: 880, count: 4 },
+    { width: 1086, count: 5 },
   ]
 
   const maxVisible = useVisibleItemsCount(maxVisibleBreakpoints, 7);

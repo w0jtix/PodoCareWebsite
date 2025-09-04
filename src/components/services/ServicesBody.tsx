@@ -12,7 +12,6 @@ import { useSearchParams } from "react-router-dom";
 import { getServiceForDisease } from "../utlis/diseaseServiceMap";
 import { useIsMobile } from "../hooks/useIsMobile";
 import arrowThin from "../../assets/arrow_thin.svg"
-import { normalizeString } from "../utlis/textUtils";
 
 interface CategoryItem {
   id: string;
@@ -46,25 +45,24 @@ export function ServicesBody() {
   useEffect(() => {
     const query = searchParams.get("disease");
     if (query) {
-      const normalizedQuery = normalizeString(query);
-      const directMatch = priceListData.find((s) => normalizeString(s.name) === normalizedQuery);
+      const directMatch = priceListData.find((s) => s.name === query);
 
       if (directMatch) {
         setSelectedService(directMatch);
-        if (normalizedQuery.includes("zabieg podologiczny") && directMatch.category === "Zabiegi") {
+        if (query.includes("zabieg podologiczny") && directMatch.category === "Zabiegi") {
           setPreselectedZabiegiId(directMatch.id);
-        } else if (normalizedQuery.includes("metodą chemiczną") && directMatch.category === "Brodawki wirusowe") {
+        } else if (query.includes("metodą chemiczną") && directMatch.category === "Brodawki wirusowe") {
           const selectionMap: Record<string, string> = {
             "Usuwanie brodawki wirusowej metodą chemiczną" : "1",
             "Usuwanie 2-3 brodawek wirusowych metodą chemiczną" : "2-3",
             "Usuwanie 4-7 brodawek wirusowych metodą chemiczną" : "4-7",
             "Usuwanie 8+ brodawek wirusowych metodą chemiczną" : "8+",
           };
-          setPreselectedBrodawkiValue(selectionMap[normalizedQuery]);
+          setPreselectedBrodawkiValue(selectionMap[query]);
         }
 
       } else {
-        const mappedService = getServiceForDisease(normalizedQuery);
+        const mappedService = getServiceForDisease(query);
         if (mappedService) {
           setSelectedService(mappedService);
         }

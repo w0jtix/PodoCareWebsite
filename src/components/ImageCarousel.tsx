@@ -63,7 +63,11 @@ export function ImageCarousel({
 
       const calculatedImageWidth =
         (containerWidth - gapValue * (maxVisible - 1)) / maxVisible;
-      setImageWidth(picWidth ?? calculatedImageWidth);
+      
+      // max width capped 150px in css
+      const actualImageWidth = Math.min(calculatedImageWidth, 150);
+
+      setImageWidth(actualImageWidth);
       setGap(gapValue);
     }
   }, [maxVisible]);
