@@ -2333,19 +2333,28 @@ script {
   padding-top: 0.57rem;
   z-index: 1000;
 
-   padding-top: calc(0.57rem + env(safe-area-inset-top));
-  padding-bottom: env(safe-area-inset-bottom);
-  padding-left: env(safe-area-inset-left);
-  padding-right: env(safe-area-inset-right);
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
   
-  margin-top: calc(-1 * env(safe-area-inset-top));
-  margin-bottom: calc(-1 * env(safe-area-inset-bottom));
-  margin-left: calc(-1 * env(safe-area-inset-left));
-  margin-right: calc(-1 * env(safe-area-inset-right));
   
-  height: calc(100vh + env(safe-area-inset-top) + env(safe-area-inset-bottom));
-  height: calc(100dvh + env(safe-area-inset-top) + env(safe-area-inset-bottom));
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
+.popup-overlay::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: -1;
+  pointer-events: none;
+}
+
 .popup-content {
   width: 1200px;
   height:95vh;
