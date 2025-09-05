@@ -1,7 +1,7 @@
-import { useLayoutEffect } from "react";
+import { useEffect } from "react";
 
 export const useThemeColor = (color: string) => {
-  useLayoutEffect(() => {
+  useEffect(() => {
   const bodyElement = document.body;
   const themeMeta = document.querySelector(
     'meta[name="theme-color"]'
@@ -9,8 +9,11 @@ export const useThemeColor = (color: string) => {
 
   if (!bodyElement || !themeMeta) return;
 
-  bodyElement.classList.add("popup-background-override");
-  themeMeta.setAttribute("content", color);
+  // Apply popup color & class after next paint
+  requestAnimationFrame(() => {
+    bodyElement.classList.add("popup-background-override");
+    themeMeta.setAttribute("content", color);
+  });
 
   return () => {
     bodyElement.classList.remove("popup-background-override");
