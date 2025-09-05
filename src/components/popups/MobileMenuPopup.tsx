@@ -4,7 +4,6 @@ import HeaderLogo from "../HeaderLogo";
 import HeaderSocials from "../header/HeaderSocials";
 import closeIcon from "../../assets/close.svg";
 import { AppTab } from "../../data/appTabs";
-import { useThemeColor } from "../hooks/useThemeColor";
 
 export interface MobileMenuPopupProps {
   page: AppTab;
@@ -17,7 +16,6 @@ export function MobileMenuPopup({
   className = "",
   onClose,
 }: MobileMenuPopupProps) {
-  useThemeColor("#000000");
 
   const portalRoot = document.getElementById("portal-root");
   if (!portalRoot) {

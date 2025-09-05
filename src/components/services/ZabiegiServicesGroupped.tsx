@@ -11,9 +11,10 @@ import { AppTab } from "../../data/appTabs";
 import { redirectTo } from "../utlis/navigation";
 import { useVisibleItemsCount } from "../hooks/useVisibleItemsCount";
 import { zabiegiIntroInformations } from "../../data/texts";
-import important from "../../assets/important.svg"
-import doubleArrow from "../../assets/double-arrow.svg"
+import important from "../../assets/important.svg";
+import doubleArrow from "../../assets/double-arrow.svg";
 import { useNavigate } from "react-router-dom";
+import { useThemeColor } from "../hooks/useThemeColor";
 
 export interface ZabiegiServicesGrouppedProps {
   visibleImg: number;
@@ -38,6 +39,8 @@ export function ZabiegiServicesGroupped({
     { width: 1024, count: 5 },
     { width: 1280, count: 5 },
   ];
+
+  useThemeColor(popupOpen ? "#000000" : "#D7D7D7");
 
   const visibleCount = useVisibleItemsCount(zabiegiCardBreakpoints, 5);
 
@@ -123,7 +126,9 @@ export function ZabiegiServicesGroupped({
           {selectedCardService.folder && (
             <section className="sd-section gallery flex justify-center align-items-center">
               <ImageCarousel
-                pictures={loadShuffledImagesFromFolder(selectedCardService.folder)}
+                pictures={loadShuffledImagesFromFolder(
+                  selectedCardService.folder
+                )}
                 maxVisible={visibleImg}
                 className="services-img"
                 arrowClassName="services-img"

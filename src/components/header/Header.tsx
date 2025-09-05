@@ -11,6 +11,7 @@ import { useIsMobile } from "../hooks/useIsMobile";
 import { callTo } from "../utlis/navigation";
 import callUs from "../../assets/call-us.svg"
 import hamburgerMenu from "../../assets/hamburger-menu.svg"
+import { useThemeColor } from "../hooks/useThemeColor";
 
 export interface HeaderProps {
   page: AppTab
@@ -23,6 +24,8 @@ export function Header({ page }: HeaderProps) {
   const handleMobileMenuClick = useCallback(() => {
     setIsMobileMenuOpen((prev) => !prev);
   },[]);
+
+  useThemeColor(isMobileMenuOpen ? "#000000" : "#D7D7D7");
 
   return (
     <div className="header-background flex justify-center align-items-end width-max">

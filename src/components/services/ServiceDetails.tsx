@@ -14,6 +14,7 @@ import { useVisibleItemsCount } from "../hooks/useVisibleItemsCount";
 import doubleArrow from "../../assets/double-arrow.svg"
 import singleArrow from "../../assets/single-arrow.svg"
 import { useNavigate } from "react-router-dom";
+import { useThemeColor } from "../hooks/useThemeColor";
 
 export interface ServiceDetailsProps {
   selectedService: PriceListItem | null;
@@ -40,6 +41,8 @@ export function ServiceDetails({
     { width: 1280, count: 5 },
     { width: 1700, count: 6 },
   ];
+  
+  useThemeColor(popupOpen ? "#000000" : "#D7D7D7");
 
   const visibleCount = useVisibleItemsCount(imagesCarouselBreakpoints, 7);
 
