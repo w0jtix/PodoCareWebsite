@@ -3,9 +3,9 @@ import ReactDOM from "react-dom";
 import { Picture } from "@/data/diseases";
 import ImageCarousel from "../ImageCarousel";
 import { useVisibleItemsCount } from "../hooks/useVisibleItemsCount";
-import closeIcon from "../../assets/close.svg"
-import arrow from "../../assets/arrow.svg"
-import { usePopupBackground } from "../hooks/usePopupBackgroud";
+import closeIcon from "../../assets/close.svg";
+import arrow from "../../assets/arrow.svg";
+import { useThemeColor } from "../hooks/useThemeColor";
 
 export interface ImageGalleryPopupProps {
   header?: string;
@@ -37,9 +37,9 @@ export function ImageGalleryPopup({
     { width: 768, count: 3 },
     { width: 880, count: 4 },
     { width: 1086, count: 5 },
-  ]
+  ];
 
-  usePopupBackground("#000000");
+  useThemeColor("#000000");
 
   const maxVisible = useVisibleItemsCount(maxVisibleBreakpoints, 7);
 
@@ -121,15 +121,14 @@ export function ImageGalleryPopup({
         className={`popup-content flex-column relative ${className}`}
         onClick={(e) => e.stopPropagation()}
       >
-        <button className="popup-close-button absolute pointer transparent border-none p-0" onClick={onClose}>
-            <img
-              src={closeIcon}
-              alt="Close"
-              className="popup-close-icon"
-            />
-          </button>
+        <button
+          className="popup-close-button absolute pointer transparent border-none p-0"
+          onClick={onClose}
+        >
+          <img src={closeIcon} alt="Close" className="popup-close-icon" />
+        </button>
         <div className="popup-h-container flex justify-center">
-          <h2 className={`popup-header ${className}`}>{header}</h2>       
+          <h2 className={`popup-header ${className}`}>{header}</h2>
         </div>
         <div className="pic-carousel flex">
           {showArrows && (

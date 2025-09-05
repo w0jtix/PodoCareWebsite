@@ -72,9 +72,6 @@ html, body {
   padding: 0;
   background-size: cover;
 }
-body.popup-background-override {
-  background-color: #000 !important;
-}
 .page {
   background-color: var(--color-body-background);
   padding-top: calc(9rem + env(safe-area-inset-top));
