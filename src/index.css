@@ -72,7 +72,7 @@ html, body {
   padding: 0;
   background-size: cover;
 }
-.body.popup-background-override {
+body.popup-background-override {
   background-color: rgba(0, 0, 0, 0.75) !important;
 }
 .page {
