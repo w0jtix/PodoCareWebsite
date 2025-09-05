@@ -17,7 +17,7 @@ export function MobileMenuPopup({
   className = "",
   onClose,
 }: MobileMenuPopupProps) {
-  usePopupBackground("rgba(0,0,0,0.75");
+  usePopupBackground("#000000");
 
   const portalRoot = document.getElementById("portal-root");
   if (!portalRoot) {

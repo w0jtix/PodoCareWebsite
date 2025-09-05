@@ -39,7 +39,7 @@ export function ImageGalleryPopup({
     { width: 1086, count: 5 },
   ]
 
-  usePopupBackground('rgba(0,0,0,0.75');
+  usePopupBackground("#000000");
 
   const maxVisible = useVisibleItemsCount(maxVisibleBreakpoints, 7);
 
