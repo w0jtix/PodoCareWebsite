@@ -2,8 +2,9 @@ import HeaderMenu from "../header/HeaderMenu";
 import ReactDOM from "react-dom";
 import HeaderLogo from "../HeaderLogo";
 import HeaderSocials from "../header/HeaderSocials";
-import closeIcon from "../../assets/close.svg"
+import closeIcon from "../../assets/close.svg";
 import { AppTab } from "../../data/appTabs";
+import { usePopupBackground } from "../hooks/usePopupBackgroud";
 
 export interface MobileMenuPopupProps {
   page: AppTab;
@@ -16,6 +17,8 @@ export function MobileMenuPopup({
   className = "",
   onClose,
 }: MobileMenuPopupProps) {
+  usePopupBackground("rgba(0,0,0,0.75");
+
   const portalRoot = document.getElementById("portal-root");
   if (!portalRoot) {
     console.error("Portal root element not found");
@@ -31,17 +34,13 @@ export function MobileMenuPopup({
           className={`popup-close-button absolute pointer transparent border-none p-0 ${className}`}
           onClick={onClose}
         >
-          <img
-            src={closeIcon}
-            alt="Close"
-            className="popup-close-icon"
-          />
+          <img src={closeIcon} alt="Close" className="popup-close-icon" />
         </button>
         <div className="mobile-menu-container height-max flex width-max">
           <div className="flex-column width-max height-max align-self-start space-between">
             <HeaderLogo className={className} />
             <HeaderMenu page={page} className="mobile-menu" />
-            <HeaderSocials className={className}/>
+            <HeaderSocials className={className} />
           </div>
         </div>
       </div>

@@ -2332,29 +2332,7 @@ script {
   align-items: flex-start;
   padding-top: 0.57rem;
   z-index: 1000;
-
-  width: 100vw;
-  height: 100vh;
-  height: 100dvh;
-  
-  
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
-.popup-overlay::after {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.75);
-  z-index: -1;
-  pointer-events: none;
-}
-
 .popup-content {
   width: 1200px;
   height:95vh;

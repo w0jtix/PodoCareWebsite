@@ -5,6 +5,7 @@ import ImageCarousel from "../ImageCarousel";
 import { useVisibleItemsCount } from "../hooks/useVisibleItemsCount";
 import closeIcon from "../../assets/close.svg"
 import arrow from "../../assets/arrow.svg"
+import { usePopupBackground } from "../hooks/usePopupBackgroud";
 
 export interface ImageGalleryPopupProps {
   header?: string;
@@ -37,6 +38,8 @@ export function ImageGalleryPopup({
     { width: 880, count: 4 },
     { width: 1086, count: 5 },
   ]
+
+  usePopupBackground('rgba(0,0,0,0.75');
 
   const maxVisible = useVisibleItemsCount(maxVisibleBreakpoints, 7);
 
