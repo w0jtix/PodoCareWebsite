@@ -31,7 +31,7 @@ export function Card({
     { width: 1024, count: 2 },
   ]
 
-  useThemeColor(popupOpen ? "#000000" : undefined);
+  /* useThemeColor(popupOpen ? "#000000" : undefined); */
 
   const visibleCount = useVisibleItemsCount(cardBreakpoints, 3);
 

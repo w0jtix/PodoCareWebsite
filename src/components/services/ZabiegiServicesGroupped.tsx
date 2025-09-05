@@ -40,7 +40,7 @@ export function ZabiegiServicesGroupped({
     { width: 1280, count: 5 },
   ];
 
-  useThemeColor(popupOpen ? "#000000" : undefined);
+  /* useThemeColor(popupOpen ? "#000000" : undefined); */
 
   const visibleCount = useVisibleItemsCount(zabiegiCardBreakpoints, 5);
 
