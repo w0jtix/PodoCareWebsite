@@ -2,17 +2,19 @@ import { useEffect } from "react";
 
 export const useThemeColor = (color: string) => {
   useEffect(() => {
-    const themeMeta = document.querySelector(
-      'meta[name="theme-color"]'
-    ) as HTMLMetaElement | null;
+  const bodyElement = document.body;
+  const themeMeta = document.querySelector(
+    'meta[name="theme-color"]'
+  ) as HTMLMetaElement | null;
 
-    if (!themeMeta) return;
+  if (!themeMeta) return;
 
-    const prevColor = themeMeta.getAttribute("content") || "#D7D7D7";
-    themeMeta.setAttribute("content", color);
+  themeMeta.setAttribute("content", color);
+  bodyElement?.classList.add("popup-background-override");
 
-    return () => {
-      themeMeta.setAttribute("content", prevColor);
-    };
-  }, [color]);
+  return () => {
+    bodyElement?.classList.remove("popup-background-override");
+    themeMeta.setAttribute("content", "#D7D7D7");
+  };
+}, [color]);
 };
