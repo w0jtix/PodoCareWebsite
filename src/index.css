@@ -2332,6 +2332,19 @@ script {
   align-items: flex-start;
   padding-top: 0.57rem;
   z-index: 1000;
+
+   padding-top: calc(0.57rem + env(safe-area-inset-top));
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  
+  margin-top: calc(-1 * env(safe-area-inset-top));
+  margin-bottom: calc(-1 * env(safe-area-inset-bottom));
+  margin-left: calc(-1 * env(safe-area-inset-left));
+  margin-right: calc(-1 * env(safe-area-inset-right));
+  
+  height: calc(100vh + env(safe-area-inset-top) + env(safe-area-inset-bottom));
+  height: calc(100dvh + env(safe-area-inset-top) + env(safe-area-inset-bottom));
 }
 .popup-content {
   width: 1200px;

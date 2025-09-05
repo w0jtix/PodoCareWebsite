@@ -3,7 +3,7 @@ import { getBooksyUrl } from "../../data/booksy";
 
 const phoneNumber = "+48725868735";
 const mailAddress = "podocare.poznan@gmail.com"
-export const googleNavigation = "https://share.google/gTHhy6zYnR8I0DfxP"
+export const googleNavigation = "https://www.google.com/maps/dir/?api=1&destination=PodoCare+Gabinet+Podologiczny+Poznań"
 
 export const googleMapHook = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9735.387379077087!2d16.96857!3d52.4094519!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47045b6f9cd3a465%3A0x639faee4a26e4d4e!2sPodoCare%20Gabinet%20Podologiczny%20Pozna%C5%84!5e0!3m2!1spl!2spl!4v1752588652885!5m2!1spl!2spl";
 
