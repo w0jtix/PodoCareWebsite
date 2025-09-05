@@ -1,12 +1,11 @@
 import { useEffect } from "react";
 
-export const useThemeColor = (color: string) => {
+export const useThemeColor = (color?: string) => {
   useEffect(() => {
-    const bodyElement = document.body;
-    const themeMeta = document.querySelector(
-      'meta[name="theme-color"]'
-    ) as HTMLMetaElement | null;
+    if (!color) return;
 
+    const bodyElement = document.body;
+    const themeMeta = document.querySelector('meta[name="theme-color"]') as HTMLMetaElement | null;
     if (!bodyElement || !themeMeta) return;
 
     bodyElement.classList.add("popup-background-override");

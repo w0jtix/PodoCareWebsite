@@ -25,7 +25,8 @@ export function Header({ page }: HeaderProps) {
     setIsMobileMenuOpen((prev) => !prev);
   },[]);
 
-  useThemeColor(isMobileMenuOpen ? "#000000" : "#D7D7D7");
+  useThemeColor(isMobileMenuOpen ? "#000000" : undefined);
+
 
   return (
     <div className="header-background flex justify-center align-items-end width-max">
