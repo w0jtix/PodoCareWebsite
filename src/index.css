@@ -2325,6 +2325,11 @@ script {
   left: 0;
   width: 100vw;
   height: 100vh;
+
+  height: 100dvh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  
   background: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(3px);
