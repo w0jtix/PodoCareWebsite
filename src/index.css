@@ -2223,19 +2223,23 @@ script {
 
 .custom-alert {
   position: fixed;
-  top: 20px; 
+  /* top: 20px;  */
+  top: max(20px, env(safe-area-inset-top, 0px) + 10px);
   left: 50%;
   transform: translateX(-50%); 
   z-index: 9999;
   border-radius: 8px;
   padding: 10px 20px;
-  min-width: 320px;
+  /* min-width: 320px; */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-family: var(--font-funnel);
   word-spacing: 2px;
   letter-spacing: 0.25px;
   font-size: var(--font-size-headers);
   animation: slideInFromTop 0.3s ease-out, fadeOut 0.3s ease-in 1.9s forwards;
+
+  min-width: min(320px, 90vw);
+  max-width: calc(100vw - 40px);
 }
 .custom-alert-0 {
   background-color: #054c17;
@@ -2257,7 +2261,8 @@ script {
 }
 @keyframes slideInFromTop {
   0% {
-    transform: translateX(-50%) translateY(-100%);
+    /* transform: translateX(-50%) translateY(-100%); */
+    transform: translateX(-50%) translateY(calc(-100% - 20px));
     opacity: 0;
   }
   100% {
@@ -2271,7 +2276,8 @@ script {
     opacity: 1;
   }
   100% {
-    transform: translateX(-50%) translateY(-100%);
+    /* transform: translateX(-50%) translateY(-100%); */
+    transform: translateX(-50%) translateY(calc(-100% - 20px));
     opacity: 0;
   }
 }
