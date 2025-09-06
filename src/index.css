@@ -61,20 +61,30 @@
   --border-radius-container-value: 30px;
   --border-radius-inner-container-value: 25px;
   --container-box-shadow:4px -4px 10px rgba(0, 0, 0, 0.1);
+
+  --safe-area-bg: #D7D7D7;
 }
 
 html, body {
   width: 100%;
   min-height: 100vh;
   min-height: 100dvh;
-  background-color: var(--color-header-footer-background);
+  /* background-color: var(--color-header-footer-background); */
+  background-color: var(--safe-area-bg) !important;
   margin: 0;
   padding: 0;
   background-size: cover;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.1s ease;
 }
-.popup-safe-area-dark {
-  background-color: #000000 !important;
+.safe-area-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--safe-area-bg);
+  z-index: -1;
+  pointer-events: none;
 }
 .page {
   background-color: var(--color-body-background);
