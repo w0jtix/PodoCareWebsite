@@ -5,6 +5,7 @@ import ImageCarousel from "../ImageCarousel";
 import { useVisibleItemsCount } from "../hooks/useVisibleItemsCount";
 import closeIcon from "../../assets/close.svg";
 import arrow from "../../assets/arrow.svg";
+import { useSafeAreaForPopup } from "../utlis/safeAreaManager";
 
 export interface ImageGalleryPopupProps {
   header?: string;
@@ -28,6 +29,11 @@ export function ImageGalleryPopup({
   const [currentIndex, setCurrentIndex] = useState<number>(selectedIndex);
   const [bottomTrackIndex, setBottomTrackIndex] = useState<number>(0);
   const [isSliding, setIsSliding] = useState<boolean>(false);
+
+  const [touchStart, setTouchStart] = useState<number>(0);
+  const [touchEnd, setTouchEnd] = useState<number>(0);
+
+  useSafeAreaForPopup(true);
 
   const maxVisibleBreakpoints = [
     { width: 400, count: 2 },
@@ -54,7 +60,7 @@ export function ImageGalleryPopup({
         const newIndex = (prev - 1 + pictures.length) % pictures.length;
         setTimeout(() => {
           if (pictures.length > maxVisible) {
-            const newBottomTrackIndex = Math.max(0, newIndex - 7);
+            const newBottomTrackIndex = Math.max(0, newIndex - Math.floor(maxVisible/2));
             setBottomTrackIndex(newBottomTrackIndex);
           }
         }, 0);
@@ -72,7 +78,7 @@ export function ImageGalleryPopup({
         const newIndex = (prev + 1) % pictures.length;
         setTimeout(() => {
           if (pictures.length > maxVisible) {
-            const newBottomTrackIndex = Math.max(0, newIndex - 7);
+            const newBottomTrackIndex = Math.max(0, newIndex - Math.floor(maxVisible/2));
             setBottomTrackIndex(newBottomTrackIndex);
           }
         }, 0);
@@ -104,6 +110,30 @@ export function ImageGalleryPopup({
   const handleBottomPictureClick = useCallback((originalIndex: number) => {
     setCurrentIndex(originalIndex);
   }, []);
+
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    setTouchEnd(0);
+    setTouchStart(e.targetTouches[0].clientX);
+  }, []);
+
+  const handleTouchMove = useCallback((e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  }, []);
+
+  const handleTouchEnd = useCallback(() => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe && pictures.length > 1) {
+      handleMainNext();
+    }
+    if (isRightSwipe && pictures.length > 1) {
+      handleMainPrev();
+    }
+  }, [touchStart, touchEnd, pictures.length, handleMainNext, handleMainPrev]);
 
   const showArrows = pictures.length > 1;
 
@@ -146,6 +176,10 @@ export function ImageGalleryPopup({
             src={selectedPicture?.src}
             alt={selectedPicture?.alt}
             key={currentIndex}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+            style={{ touchAction: 'pan-y pinch-zoom' }}
           ></img>
 
           {showArrows && (
