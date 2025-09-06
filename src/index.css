@@ -2229,7 +2229,7 @@ script {
   z-index: 9999;
   border-radius: 8px;
   padding: 10px 20px;
-  min-width: min(320px, 90vw);
+  min-width: 250px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-family: var(--font-funnel);
   word-spacing: 2px;
