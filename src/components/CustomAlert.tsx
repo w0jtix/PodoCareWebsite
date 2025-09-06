@@ -1,8 +1,10 @@
 import { Alert } from '../data/alert'
 import { useEffect, useState } from "react";
+import { useIsMobile } from './hooks/useIsMobile';
 
 export function CustomAlert (props: Alert) {
   const [topOffset, setTopOffset] = useState(20);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const updateOffset = () => {
@@ -20,7 +22,7 @@ export function CustomAlert (props: Alert) {
   }, []);
 
   return (
-    <div className={`custom-alert custom-alert-${props.variant} flex justify-center align-items-center`}
+    <div className={`custom-alert custom-alert-${props.variant} flex justify-center align-items-center ${isMobile? "mobile-widht" : ""}`}
     style={{ top: `${topOffset}px` }}>
         <a className="alert-message flex-grow justify-center">{props.message}</a>
     </div>

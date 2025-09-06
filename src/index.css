@@ -2229,13 +2229,18 @@ script {
   z-index: 9999;
   border-radius: 8px;
   padding: 10px 20px;
-  min-width: 250px;
+  min-width: 320px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-family: var(--font-funnel);
   word-spacing: 2px;
   letter-spacing: 0.25px;
   font-size: var(--font-size-headers);
   animation: slideInFromTop 0.3s ease-out, fadeOut 0.3s ease-in 1.9s forwards;
+}
+.custom-alert.mobile-width {
+  min-width: 250px;
+  width: 250px;
+  max-width: 250px;
 }
 .custom-alert-0 {
   background-color: #054c17;
