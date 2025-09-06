@@ -15,7 +15,6 @@ import doubleArrow from "../../assets/double-arrow.svg"
 import singleArrow from "../../assets/single-arrow.svg"
 import { useNavigate } from "react-router-dom";
 import { useThemeColor } from "../hooks/useThemeColor";
-import { useSafeAreaColor } from "../utlis/safeAreaManager";
 
 export interface ServiceDetailsProps {
   selectedService: PriceListItem | null;
@@ -43,8 +42,7 @@ export function ServiceDetails({
     { width: 1700, count: 6 },
   ];
   
-  /* useThemeColor(popupOpen ? "#000000" : undefined); */
-  useSafeAreaColor(popupOpen);
+  useThemeColor(popupOpen ? "#000000" : undefined);
 
   const visibleCount = useVisibleItemsCount(imagesCarouselBreakpoints, 7);
 

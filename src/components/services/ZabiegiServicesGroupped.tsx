@@ -15,7 +15,6 @@ import important from "../../assets/important.svg";
 import doubleArrow from "../../assets/double-arrow.svg";
 import { useNavigate } from "react-router-dom";
 import { useThemeColor } from "../hooks/useThemeColor";
-import { useSafeAreaColor } from "../utlis/safeAreaManager";
 
 export interface ZabiegiServicesGrouppedProps {
   visibleImg: number;
@@ -41,8 +40,7 @@ export function ZabiegiServicesGroupped({
     { width: 1280, count: 5 },
   ];
 
-  /* useThemeColor(popupOpen ? "#000000" : undefined); */
-  useSafeAreaColor(popupOpen);
+  useThemeColor(popupOpen ? "#000000" : undefined);
 
   const visibleCount = useVisibleItemsCount(zabiegiCardBreakpoints, 5);
 

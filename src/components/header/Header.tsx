@@ -12,7 +12,6 @@ import { callTo } from "../utlis/navigation";
 import callUs from "../../assets/call-us.svg"
 import hamburgerMenu from "../../assets/hamburger-menu.svg"
 import { useThemeColor } from "../hooks/useThemeColor";
-import { useSafeAreaColor } from "../utlis/safeAreaManager";
 
 export interface HeaderProps {
   page: AppTab
@@ -26,8 +25,7 @@ export function Header({ page }: HeaderProps) {
     setIsMobileMenuOpen((prev) => !prev);
   },[]);
 
-  /* useThemeColor(isMobileMenuOpen ? "#000000" : undefined); */
-  useSafeAreaColor(isMobileMenuOpen);
+  useThemeColor(isMobileMenuOpen ? "#000000" : undefined);
 
   return (
     <div className="header-background flex justify-center align-items-end width-max">

@@ -5,7 +5,6 @@ import ImageCarousel from "../ImageCarousel";
 import { useVisibleItemsCount } from "../hooks/useVisibleItemsCount";
 import closeIcon from "../../assets/close.svg";
 import arrow from "../../assets/arrow.svg";
-import { useSafeAreaForPopup } from "../utlis/safeAreaManager";
 
 export interface ImageGalleryPopupProps {
   header?: string;
@@ -32,8 +31,6 @@ export function ImageGalleryPopup({
 
   const [touchStart, setTouchStart] = useState<number>(0);
   const [touchEnd, setTouchEnd] = useState<number>(0);
-
-  useSafeAreaForPopup(true);
 
   const maxVisibleBreakpoints = [
     { width: 400, count: 2 },

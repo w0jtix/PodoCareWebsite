@@ -8,7 +8,6 @@ import { navigateToServiceDetail } from "./utlis/navigation";
 import { useVisibleItemsCount } from "./hooks/useVisibleItemsCount";
 import { useIsMobile } from "./hooks/useIsMobile";
 import { useThemeColor } from "./hooks/useThemeColor";
-import { useSafeAreaColor } from "./utlis/safeAreaManager";
 
 export interface CardProps {
   name: string;
@@ -32,8 +31,7 @@ export function Card({
     { width: 1024, count: 2 },
   ]
 
-  /* useThemeColor(popupOpen ? "#000000" : undefined); */
-  useSafeAreaColor(popupOpen);
+  useThemeColor(popupOpen ? "#000000" : undefined);
 
   const visibleCount = useVisibleItemsCount(cardBreakpoints, 3);
 

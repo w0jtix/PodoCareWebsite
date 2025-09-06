@@ -4,7 +4,6 @@ import HeaderLogo from "../HeaderLogo";
 import HeaderSocials from "../header/HeaderSocials";
 import closeIcon from "../../assets/close.svg";
 import { AppTab } from "../../data/appTabs";
-import { useSafeAreaForPopup } from "../utlis/safeAreaManager";
 
 export interface MobileMenuPopupProps {
   page: AppTab;
@@ -17,8 +16,6 @@ export function MobileMenuPopup({
   className = "",
   onClose,
 }: MobileMenuPopupProps) {
-
-  useSafeAreaForPopup(true);
 
   const portalRoot = document.getElementById("portal-root");
   if (!portalRoot) {
