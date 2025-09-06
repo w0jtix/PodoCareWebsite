@@ -2238,9 +2238,9 @@ script {
   animation: slideInFromTop 0.3s ease-out, fadeOut 0.3s ease-in 1.9s forwards;
 }
 .custom-alert.mobile-width {
-  min-width: 250px;
-  width: 250px;
-  max-width: 250px;
+  min-width: 220px;
+  width: 220px;
+  max-width: 220px;
 }
 .custom-alert-0 {
   background-color: #054c17;
