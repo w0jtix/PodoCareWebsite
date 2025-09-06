@@ -29,6 +29,12 @@ export function ContactForm({ className = "" }: ContactFormProps) {
   const showAlert = (
     (message: string, variant: AlertType) => {
       setAlert({ message, variant });
+
+      const activeElement = document.activeElement as HTMLElement;
+      if (activeElement && activeElement.blur) {
+        activeElement.blur();
+      }
+      
       setTimeout(() => {
         setAlert(null);
       }, 3000);
