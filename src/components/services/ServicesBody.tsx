@@ -59,6 +59,7 @@ export function ServicesBody() {
             "Usuwanie 8+ brodawek wirusowych metodą chemiczną" : "8+",
           };
           setPreselectedBrodawkiValue(selectionMap[query]);
+          setSelectedService(getServiceForDisease(query));
         }
 
       } else {
@@ -69,6 +70,26 @@ export function ServicesBody() {
       }
     }
   }, [searchParams]);
+
+  useEffect(() => {
+  if (preselectedBrodawkiValue) {
+    const selectionMap: Record<string, string> = {
+      "1": "Usuwanie brodawki wirusowej metodą chemiczną",
+      "2-3": "Usuwanie 2-3 brodawek wirusowych metodą chemiczną",
+      "4-7": "Usuwanie 4-7 brodawek wirusowych metodą chemiczną",
+      "8+": "Usuwanie 8+ brodawek wirusowych metodą chemiczną",
+    };
+
+    const targetServiceName = selectionMap[preselectedBrodawkiValue];
+    const matchingService = priceListData.find(
+      (service) => service.name === targetServiceName
+    );
+
+    if (matchingService) {
+      setSelectedService(matchingService);
+    }
+  }
+}, [preselectedBrodawkiValue]);
 
   const isMobile = useIsMobile();
 
@@ -147,7 +168,7 @@ export function ServicesBody() {
       const isGroupedCategory =
         selectedCategory.id === "Zabiegi Podologiczne" ||
         selectedCategory.id === "Brodawki wirusowe";
-      const shouldAutoSelect =
+      const shouldAutoSelect = !preselectedBrodawkiValue &&
         (isGroupedCategory && !isManualSelectorSelection.current) ||
         (services.length === 1 && !isGroupedCategory);
 
