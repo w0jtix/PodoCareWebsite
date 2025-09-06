@@ -3411,7 +3411,7 @@ script {
   }
   .mobile-menu-container {
     width:100%; 
-    background-color: var(--color-body-background);
+    background-color: var(--color-header-footer-background);
     overflow: hidden;
     overflow-y: auto;
   }

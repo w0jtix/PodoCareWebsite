@@ -250,14 +250,14 @@ export const priceListData: PriceListItem[] = [
     {
         id: 17,
         category: "Paznokcie stóp",
-        name: "Usunięcie rekonstrukcji wykonanej w innym gabinecie",
+        name: "Usunięcie rekonstrukcji",
         subName:"każdy kolejny paznokieć",
         price: 45,
         subPrice: 20,
         duration: 35,
         serviceDesc: "Profesjonalne i bezpieczne usunięcie rekonstrukcji paznokcia z zastosowaniem odpowiednich narzędzi.",
         shortDesc: "Profesjonalne i bezpieczne usunięcie rekonstrukcji paznokcia przy użyciu odpowiednich narzędzi. Zabieg pozwala zdjąć starą lub nieprawidłowo wykonaną rekonstrukcję, dbając o naturalną płytkę i otaczającą ją skórę.",
-        isItForYouDesc: ["Chcesz bezpiecznie usunąć rekonstrukcję paznokcia wykonaną w innym gabinecie?","Rekonstrukcja powoduje dyskomfort lub nie spełnia oczekiwań estetycznych?","Planujesz wykonać nową rekonstrukcję paznokcia i potrzebujesz przygotować naturalną płytkę?"],
+        isItForYouDesc: ["Chcesz bezpiecznie usunąć rekonstrukcję paznokcia?","Rekonstrukcja powoduje dyskomfort lub nie spełnia oczekiwań estetycznych?","Planujesz wykonać nową rekonstrukcję paznokcia i potrzebujesz przygotować naturalną płytkę?"],
         visitDesc: "Przeprowadzamy dokładny wywiad i informujemy o przebiegu zabiegu. Dokładnie sprawdzamy paznokieć i otaczającą skórę, aby ocenić stan naturalnej płytki. Następnie delikatnie usuwamy rekonstrukcję przy użyciu specjalistycznych narzędzi, z zachowaniem ostrożności, aby nie uszkodzić naturalnego paznokcia ani skóry wokół niego. Po zakończeniu zabiegu paznokieć jest gotowy do dalszej pielęgnacji lub wykonania nowej rekonstrukcji.",
         folder: "paznokcieStop/usuniecieRekonstrukcji"
     },
