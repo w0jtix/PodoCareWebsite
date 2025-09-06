@@ -42,7 +42,7 @@ export function ServiceDetails({
     { width: 1700, count: 6 },
   ];
   
-  useThemeColor(popupOpen ? "#000000" : undefined);
+  useThemeColor(popupOpen);
 
   const visibleCount = useVisibleItemsCount(imagesCarouselBreakpoints, 7);
 
