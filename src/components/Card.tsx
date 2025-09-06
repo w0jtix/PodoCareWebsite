@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 import { navigateToServiceDetail } from "./utlis/navigation";
 import { useVisibleItemsCount } from "./hooks/useVisibleItemsCount";
 import { useIsMobile } from "./hooks/useIsMobile";
-import { usePreventScroll } from "./hooks/usePreventScroll";
 
 export interface CardProps {
   name: string;
@@ -30,8 +29,6 @@ export function Card({
     { width: 768, count: 2 },
     { width: 1024, count: 2 },
   ]
-  
-  usePreventScroll(popupOpen);
 
   const visibleCount = useVisibleItemsCount(cardBreakpoints, 3);
 

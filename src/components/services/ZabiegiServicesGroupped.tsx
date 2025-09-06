@@ -14,7 +14,6 @@ import { zabiegiIntroInformations } from "../../data/texts";
 import important from "../../assets/important.svg";
 import doubleArrow from "../../assets/double-arrow.svg";
 import { useNavigate } from "react-router-dom";
-import { usePreventScroll } from "../hooks/usePreventScroll";
 
 export interface ZabiegiServicesGrouppedProps {
   visibleImg: number;
@@ -39,9 +38,6 @@ export function ZabiegiServicesGroupped({
     { width: 1024, count: 5 },
     { width: 1280, count: 5 },
   ];
-
-  usePreventScroll(popupOpen);
-
   const visibleCount = useVisibleItemsCount(zabiegiCardBreakpoints, 5);
 
   const handleCardClick = (serviceId: number) => {

@@ -2325,11 +2325,6 @@ script {
   left: 0;
   width: 100vw;
   height: 100vh;
-
-  height: 100dvh;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  
   background: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(3px);
@@ -3416,7 +3411,7 @@ script {
   }
   .mobile-menu-container {
     width:100%; 
-    background-color: rgb(28, 28, 28);
+    background-color: var(--color-body-background);
     overflow: hidden;
     overflow-y: auto;
   }
@@ -3439,7 +3434,8 @@ script {
    }
   .menu-button-text.mobile-menu {
     opacity: 100%;
-    color:white;
+    color: rgba(0, 0, 0, 0.73);
+    font-weight: var(--font-weight-bold);
     font-size: 20px;
   }
   .menu-item-div.mobile-menu::after {
@@ -3466,7 +3462,7 @@ script {
     letter-spacing: 0.25px;
   }
   .header-logo-container.mobile-menu {
-    background-color: var(--color-super-light-grey-2);
+    background-color: var(--color-white);
     width: fit-content;
     align-self: center;
     padding: 0rem 1rem;
@@ -3489,7 +3485,7 @@ script {
     flex-direction: row;
     gap: 1rem;
     margin-bottom: 0.525rem;
-    background-color: var(--color-super-light-grey-2);
+    background-color: var(--color-white);
     width:fit-content;
     align-self:center;
     border-radius: 5px;

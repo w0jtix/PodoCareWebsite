@@ -11,7 +11,6 @@ import { useIsMobile } from "../hooks/useIsMobile";
 import { callTo } from "../utlis/navigation";
 import callUs from "../../assets/call-us.svg"
 import hamburgerMenu from "../../assets/hamburger-menu.svg"
-import { usePreventScroll } from "../hooks/usePreventScroll";
 
 export interface HeaderProps {
   page: AppTab
@@ -24,8 +23,6 @@ export function Header({ page }: HeaderProps) {
   const handleMobileMenuClick = useCallback(() => {
     setIsMobileMenuOpen((prev) => !prev);
   },[]);
-
-  usePreventScroll(isMobileMenuOpen);
 
   return (
     <div className="header-background flex justify-center align-items-end width-max">
