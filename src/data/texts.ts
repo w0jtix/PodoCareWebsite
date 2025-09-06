@@ -26,8 +26,7 @@ export type employee = {
     img: Picture;
 }
 
-/* import mariaImg from "../assets/maria1.png" */
-import mariaImg2 from "../assets/maria2.JPG"
+import mariaImg2 from "../assets/maria2.jpg"
 import olgaImg from "../assets/olga1edit.jpg"
 
 export const employeeData: employee[] = [{
