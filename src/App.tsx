@@ -13,8 +13,6 @@ import { AppTab, tabRoutes } from "./data/appTabs";
 function App() {
 
   return (
-    <>
-      <div className="safe-area-background" />
     <Router>
       <Routes>
         <Route path={tabRoutes[AppTab.STRONA_GLOWNA]} element={<Home/>}/>
@@ -27,7 +25,6 @@ function App() {
         <Route path={tabRoutes[AppTab.KONTAKT]} element={<Contact />}/>
       </Routes>
     </Router>
-    </>
   )
 }
 

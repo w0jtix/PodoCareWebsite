@@ -14,7 +14,7 @@ import { zabiegiIntroInformations } from "../../data/texts";
 import important from "../../assets/important.svg";
 import doubleArrow from "../../assets/double-arrow.svg";
 import { useNavigate } from "react-router-dom";
-import { useThemeColor } from "../hooks/useThemeColor";
+import { usePreventScroll } from "../hooks/usePreventScroll";
 
 export interface ZabiegiServicesGrouppedProps {
   visibleImg: number;
@@ -40,7 +40,7 @@ export function ZabiegiServicesGroupped({
     { width: 1280, count: 5 },
   ];
 
-  useThemeColor(popupOpen);
+  usePreventScroll(popupOpen);
 
   const visibleCount = useVisibleItemsCount(zabiegiCardBreakpoints, 5);
 
