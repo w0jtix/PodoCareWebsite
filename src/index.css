@@ -4529,6 +4529,8 @@ script {
   }
   .pic-carousel {
     gap: 1.5rem;
+    min-height: 47vh;
+    height: 47vh;
   }
   .carousel-picture {
     width: 66%;
@@ -4928,6 +4930,9 @@ script {
   }
   .sd-info-card .button {
     height: 30px;
+  }
+  .popup-overlay {
+    padding-top: 0;
   }
   .popup-content {
     gap: 1rem;
