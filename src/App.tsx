@@ -9,6 +9,7 @@ import Contact from './pages/Contact'
 import TermsAndConditions from './pages/TermsAndConditions'
 import { rodoData, termsData } from './data/terms'
 import { AppTab, tabRoutes } from "./data/appTabs";
+import NotFound from './pages/NotFound'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
         <Route path={tabRoutes[AppTab.REGULAMIN]} element={<TermsAndConditions pageTitle={AppTab.REGULAMIN} data={termsData}/>}/>
         <Route path={tabRoutes[AppTab.RODO]} element={<TermsAndConditions pageTitle={AppTab.RODO} data={rodoData}/>}/>
         <Route path={tabRoutes[AppTab.KONTAKT]} element={<Contact />}/>
+        <Route path="*" element={<NotFound />}/>
       </Routes>
     </Router>
   )

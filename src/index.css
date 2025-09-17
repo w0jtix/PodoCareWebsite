@@ -85,6 +85,20 @@ html, body {
 script {
   display: block;
 }
+.not-found-container {
+  margin-top: 5%;
+  background-color: var(--color-white);
+  border-radius: 30px;
+  padding: 3rem;
+}
+.not-found-content {
+  margin-top: 1rem;
+  gap: 2.3rem;
+}
+.header-h1.not-found {
+  margin-left: 0;
+  text-align:center;
+}
 .header-background,
 .body-background,
 .footer-background {
@@ -4228,7 +4242,10 @@ script {
 
 @media (min-width: 320px) and (max-width: 767px) {
 
-
+  .not-found-container {
+    margin-top: 15%;
+    padding: 2rem;
+  }
   .header-left-section {
     width:30%;
   }
@@ -4725,6 +4742,9 @@ script {
 }
 
 @media (min-width: 320px) and (max-width: 469px) {
+  .not-found-container {
+    padding: 1rem;
+  }
   .header-container {
     height: 6.5rem;
   }
