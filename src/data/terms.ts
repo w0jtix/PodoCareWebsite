@@ -19,6 +19,17 @@ export interface TermsData {
     sections: Section[];
     dateUpdated: string,
     footer: string;
+    promotionTerms?: {
+        title: string;
+        sections: Section[];
+        dateUpdated: string,
+        footer: string;
+    }
+}
+
+export enum TermType {
+    GENERAL = 'general',
+    PROMOTION = 'promotion'
 }
 
 export const termsData: TermsData = {
@@ -310,7 +321,102 @@ export const termsData: TermsData = {
                 }
             ]
         }
-    ]
+    ],
+    promotionTerms: {
+        title:"REGULAMIN PROMOCJI ZOSTAW OPINIĘ O WIZYCIE",
+        dateUpdated: "15.09.2025 roku.",
+        footer: "REGULAMIN PROMOCJI ZOSTAW OPINIĘ O WIZYCIE z dnia ",
+        sections: [
+            {
+            id: 1,
+            title: "I. ORGANIZATOR AKCJI",
+            content: [
+                {
+                    type: "paragraph",
+                    text: '1.	Organizatorem promocji jest PodoCare Maria Piechowiak z siedzibą w Poznaniu (61-028), ul. Warszawska 51/3, NIP: 7822916361, REGON: 523721364.'
+                }            
+                ]
+            },
+            {
+                id: 2,
+            title: "II. CZAS TRWANIA AKCJI",
+            content: [
+                {
+                    type: "paragraph",
+                    text: '1.	Promocja obowiązuje od dnia 15.09.2025 roku do odwołania. Organizator zastrzega sobie prawo do zakończenia akcji w dowolnym momencie.'
+                }            
+                ]
+            },
+            {
+                id: 3,
+            title: "III. ZASADY  PROMOCJI",
+            content: [
+                {
+                    type: "paragraph",
+                    text: '1.	Uczestnik promocji, który po wizycie w gabinecie pozostawi opinię o usługach gabinetu w serwisie Google (profil Google Business), otrzymuje rabat w wysokości 5% na kolejną wizytę.'
+                },
+                {
+                    type: "paragraph",
+                    text: '2.	Rabat przysługuje wyłącznie osobie, która faktycznie pozostawiła opinię.'
+                },
+                {
+                    type: "paragraph",
+                    text: '3.	Rabat naliczany jest jednorazowo i dotyczy jednej kolejnej wizyty.'
+                }                
+                ]
+            },
+            {
+                id: 4,
+            title: "IV. ZAKRES PROMOCJI",
+            content: [
+                {
+                    type: "paragraph",
+                    text: '1.	Rabat obejmuje wyłącznie usługi podologiczne.'
+                },
+                {
+                    type: "paragraph",
+                    text: '2.	Rabat nie dotyczy zakupu kosmetyków ani produktów dostępnych w gabinecie.'
+                },
+                {
+                    type: "paragraph",
+                    text: '3.	Rabat nie łączy się z innymi promocjami i rabatami.'
+                }                
+                ]
+            },
+            {
+                id: 5,
+            title: "V. SPOSÓB NALICZANIA RABATU",
+            content: [
+                {
+                    type: "paragraph",
+                    text: '1.	Rabat w wysokości 5% naliczany jest przy rozliczeniu kolejnej wizyty po okazaniu potwierdzenia pozostawienia opinii.'
+                },
+                {
+                    type: "paragraph",
+                    text: '2.	Organizator ma prawo do weryfikacji pozostawienia opinii.'
+                }             
+                ]
+            },
+            {
+                id: 6,
+            title: "VI. POSTANOWIENIA KOŃCOWE",
+            content: [
+                {
+                    type: "paragraph",
+                    text: '1.	Udział w promocji oznacza akceptację niniejszego regulaminu.'
+                },
+                {
+                    type: "paragraph",
+                    text: '2.	Regulamin dostępny jest w gabinecie Organizatora oraz na stronie internetowej www.podocare.com.pl/#/regulamin.'
+                },
+                {
+                    type: "paragraph",
+                    text: '3.	W sprawach nieuregulowanych niniejszym regulaminem zastosowanie mają przepisy prawa polskiego.'
+                }                
+                ]
+            }
+        ]
+    }
 }
 
 export const rodoData: TermsData = {
