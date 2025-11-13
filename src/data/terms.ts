@@ -34,7 +34,7 @@ export enum TermType {
 
 export const termsData: TermsData = {
     title: "REGULAMIN ŚWIADCZENIA USŁUG",
-    dateUpdated: "01.08.2025 roku.",
+    dateUpdated: "01.11.2025 roku.",
     footer: "REGULAMIN GABINETU PODOCARE V. 1.0 z dnia ",
     sections: [
         {
@@ -47,7 +47,7 @@ export const termsData: TermsData = {
                 },
                 {
                     type: "paragraph",
-                    text: '2.	Gabinet prowadzony jest przez Marię Piechowiak prowadzącą działalność gospodarczą (na podstawie wpisu w Centralnej Ewidencji i Informacji o Działalności Gospodarczej), pod firmą: "PodoCare Maria Piechowiak z siedzibą w Poznaniu (61-028), ul. Warszawska 51/3, NIP: 7822916361, REGON: 523721364"; e-mail: podocare.poznan@gmail.com.'
+                    text: '2.	Gabinet prowadzony jest przez Wojciecha Piechowiaka prowadzącego działalność gospodarczą (na podstawie wpisu w Centralnej Ewidencji i Informacji o Działalności Gospodarczej), pod firmą: "PodoCare Wojciech Piechowiak z siedzibą w Poznaniu (61-028), ul. Warszawska 51/3, NIP: 7822883348, REGON: 386225872"; e-mail: podocare.poznan@gmail.com.'
                 },
                 {
                     type: "paragraph",
@@ -288,7 +288,7 @@ export const termsData: TermsData = {
                 },
                 {
                     type: "paragraph",
-                    text: "2.	Niniejszy Regulamin wchodzi w życie w dniu 01.08.2025 roku i jego postanowienia mają zastosowanie do wszystkich Rezerwacji Usług dokonanych po dniu jego wejścia w życie."
+                    text: "2.	Niniejszy Regulamin wchodzi w życie w dniu 01.11.2025 roku i jego postanowienia mają zastosowanie do wszystkich Rezerwacji Usług dokonanych po dniu jego wejścia w życie."
                 },
                 {
                     type: "paragraph",
@@ -333,7 +333,7 @@ export const termsData: TermsData = {
             content: [
                 {
                     type: "paragraph",
-                    text: '1.	Organizatorem promocji jest PodoCare Maria Piechowiak z siedzibą w Poznaniu (61-028), ul. Warszawska 51/3, NIP: 7822916361, REGON: 523721364.'
+                    text: '1.	Organizatorem promocji jest PodoCare Wojciech Piechowiak z siedzibą w Poznaniu (61-028), ul. Warszawska 51/3, NIP: 7822883348, REGON: 386225872.'
                 }            
                 ]
             },
@@ -421,7 +421,7 @@ export const termsData: TermsData = {
 
 export const rodoData: TermsData = {
     title: "POLITYKA PRYWATNOŚCI - RODO",
-    dateUpdated: "01.08.2025 roku.",
+    dateUpdated: "01.11.2025 roku.",
     footer: "POLITYKA PRYWATNOŚCI GABINETU PODOCARE V. 1.0 z dnia ",
     sections: [
         {
@@ -433,7 +433,7 @@ export const rodoData: TermsData = {
                 },
                 {
                     type: "paragraph",
-                    text: '1.	Administratorem Pani/ Pana danych osobowych jest Maria Piechowiak prowadząca działalność gospodarczą "PodoCare Maria Piechowiak z siedzibą w Poznaniu (61-028), ul. Warszawska 51/3, NIP: 7822916361, REGON: 523721364".'
+                    text: '1.	Administratorem Pani/ Pana danych osobowych jest Wojciech Piechowiak prowadzący działalność gospodarczą "PodoCare Wojciech Piechowiak z siedzibą w Poznaniu (61-028), ul. Warszawska 51/3, NIP: 7822883348, REGON: 386225872".'
                 },
                 {
                     type: "paragraph",
