@@ -234,13 +234,24 @@ script {
   background-color: var(--color-light-yellow);
   border-radius: 50%;
 }
-.info-oh-container:first-of-type {
+.info-oh-container {
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
+.info-oh-container:last-of-type {
+  border-bottom: none;
+}
+
+
+.footer-info-section .info-oh-d-span.short-text {
+  min-width: 38px;
+}
+
+
+
 .info-oh-days,
 .info-oh-hours {
   width: 8.4rem;
-  padding: 8px 0px;  
+  padding: 4px 0px;  
 }
 .info-oh-days {
   width: 9.2rem;

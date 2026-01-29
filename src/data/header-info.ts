@@ -13,10 +13,16 @@ export const OPENING_HOURS: OpeningHours[] = [
         hoursShort: "12 - 20"
     },
     { 
-        days: "czwartek - piątek", 
-        daysShort: "czw - pt",  
-        hours: "09:00 - 17:00",
-        hoursShort: "09 - 17"
+        days: "czwartek", 
+        daysShort: "czw",  
+        hours: "08:00 - 14:00",
+        hoursShort: "08 - 14"
+    },
+    { 
+        days: "piątek", 
+        daysShort: "pt",  
+        hours: "08:00 - 16:00",
+        hoursShort: "08 - 16"
     },
 ];
 
