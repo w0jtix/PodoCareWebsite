@@ -242,7 +242,7 @@ script {
 }
 
 
-.footer-info-section .info-oh-d-span.short-text {
+.info-oh-d-span.short-text {
   min-width: 38px;
 }
 
@@ -2595,7 +2595,7 @@ script {
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1400px){
+@media (min-width: 1024px) and (max-width: 1549px){
   .info-oh-days,
   .info-oh-hours {
     width: fit-content;
@@ -2615,6 +2615,9 @@ script {
   .info-oh-h-span.short-text {
     padding: 0 10px 0 10px;
     border-right: 1px solid rgba(0, 0, 0, 0.6);
+  }
+  .info-oh-d-span.short-text {
+    min-width: 41px;
   }
 }
 
@@ -2758,6 +2761,18 @@ script {
     width: 45%;
   }
 }
+/* @media (min-width: 1401px) and (max-width: 1549px) { 
+  .header-info .info-oh-d-span.full-text, 
+  .header-info .info-oh-h-span.full-text {
+    display: none;
+  }
+  .header-info .info-oh-d-span.short-text, 
+  .header-info .info-oh-h-span.short-text {
+    padding: 0 10px 0 10px;
+    border-right: 1px solid rgba(0, 0, 0, 0.6);
+  } 
+  
+} */
 
 @media (min-width: 1280px) and (max-width: 1549px) { 
   .cards-section {
@@ -3436,6 +3451,9 @@ script {
   .info-oh-img {
     width: 16px;
     height: 16px;
+  }
+  .footer-info-section .info-opening-hours {
+    margin-bottom: 1rem;
   }
 
   .button.hamburger-menu {
