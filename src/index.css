@@ -3474,6 +3474,7 @@ script {
     padding: 0;
     justify-content: end;
     position: fixed;
+    height: 100dvh;
   }
   .popup-content.mobile-menu {
     height: 100vh;
