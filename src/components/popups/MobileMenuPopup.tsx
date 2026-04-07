@@ -23,7 +23,7 @@ export function MobileMenuPopup({
     return null;
   }
   return ReactDOM.createPortal(
-    <div className={`popup-overlay relative ${className}`} onClick={onClose}>
+    <div className={`popup-overlay ${className}`} onClick={onClose}>
       <div
         className={`popup-content flex justify-end ${className}`}
         onClick={(e) => e.stopPropagation()}
