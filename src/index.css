@@ -3486,10 +3486,11 @@ script {
     top: 5px; 
   }
   .mobile-menu-container {
-    width:100%; 
+    width:100%;
     background-color: var(--color-header-footer-background);
     overflow: hidden;
     overflow-y: auto;
+    padding-bottom: env(safe-area-inset-bottom);
   }
   .header-menu.mobile-menu {
     display:flex;
