@@ -1490,6 +1490,7 @@ script {
   font-weight: var(--font-weight-semi-bold);
   padding: 0.5rem 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 .dropdown-item:last-child {
   border: none;

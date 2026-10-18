@@ -107,10 +107,6 @@ export function SidebarMenu({
     });
   };
 
-  const getCategoryServiceCount = (category: string): number => {
-    return data.filter((service) => service.category === category).length;
-  };
-
   const isCategoryExpanded = (category: string) => {
     return expandedCategories.has(category);
   };
@@ -145,7 +141,7 @@ export function SidebarMenu({
           onClick={() => handleServiceClick(category)}
         >
           <span className={`sb-service-name ${selectedService?.category === "Zabiegi" ? "selected" : ""}`}>
-            {`Zabiegi Podologiczne (${getCategoryServiceCount("Zabiegi")})`}
+            {`Zabiegi Podologiczne`}
           </span>
         </div>
       );
@@ -158,7 +154,7 @@ export function SidebarMenu({
           onClick={() => handleServiceClick(category)}
         >
           <span className={`sb-service-name ${selectedService?.category === "Brodawki wirusowe" ? "selected" : ""}`}>
-            {`Usuwanie brodawek wirusowych metodą chemiczną (${getCategoryServiceCount("Brodawki wirusowe")})`}
+            {`Usuwanie brodawek wirusowych metodą chemiczną`}
             
           </span>
         </div>
